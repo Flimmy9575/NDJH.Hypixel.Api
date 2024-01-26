@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDJH.Hypixel.API", "NDJH.Hypixel.API\NDJH.Hypixel.API.csproj", "{F382CF58-F453-4668-BA0A-79223323F4DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F382CF58-F453-4668-BA0A-79223323F4DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F382CF58-F453-4668-BA0A-79223323F4DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F382CF58-F453-4668-BA0A-79223323F4DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F382CF58-F453-4668-BA0A-79223323F4DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
