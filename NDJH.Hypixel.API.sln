@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDJH.Hypixel.API", "NDJH.Hypixel.API\NDJH.Hypixel.API.csproj", "{F382CF58-F453-4668-BA0A-79223323F4DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDJH.Hypixel.API.DependencyInjection", "NDJH.Hypixel.API.DependencyInjection\NDJH.Hypixel.API.DependencyInjection.csproj", "{CA95E611-7074-412E-94EE-950856F73EEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDJH.Hypixel.API.Tests", "NDJH.Hypixel.API.Tests\NDJH.Hypixel.API.Tests.csproj", "{85F8349C-BC7A-4FE7-A8EB-7C71394B3B86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{F382CF58-F453-4668-BA0A-79223323F4DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F382CF58-F453-4668-BA0A-79223323F4DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F382CF58-F453-4668-BA0A-79223323F4DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA95E611-7074-412E-94EE-950856F73EEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA95E611-7074-412E-94EE-950856F73EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA95E611-7074-412E-94EE-950856F73EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA95E611-7074-412E-94EE-950856F73EEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85F8349C-BC7A-4FE7-A8EB-7C71394B3B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85F8349C-BC7A-4FE7-A8EB-7C71394B3B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85F8349C-BC7A-4FE7-A8EB-7C71394B3B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85F8349C-BC7A-4FE7-A8EB-7C71394B3B86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
