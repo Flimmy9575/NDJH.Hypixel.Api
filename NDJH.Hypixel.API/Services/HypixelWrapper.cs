@@ -41,13 +41,13 @@ public class HypixelWrapper : IHypixelWrapper
     public HypixelWrapper(HypixelConfiguration config, HttpClient? httpClient = null, ILoggerFactory? loggerFactory = null)
     {
         // Setting up HTTP
-        if (Setup.HttpClient is null && httpClient is null)
+        if (HttpClientConfiguration.HttpClient is null && httpClient is null)
         {
-            Setup.HttpClient = Setup.ConfigureHttpClientDefault(new HttpClient(), config);
+            HttpClientConfiguration.HttpClient = HttpClientConfiguration.ConfigureHttpClientDefault(new HttpClient(), config);
         }
         
         
-        httpClient = Setup.HttpClient;
+        httpClient = HttpClientConfiguration.HttpClient;
 
         // Creating services
         OtherService = Other.Create(httpClient, loggerFactory?.CreateLogger<Other>());
