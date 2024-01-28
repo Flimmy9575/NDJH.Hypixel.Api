@@ -3,7 +3,7 @@
 namespace NDJH.Hypixel.API.Models.PlayerData;
 
 public record RecentGamesResponse(
-    [property: JsonPropertyName("games")] PlayedGames[] PlayedGames) : BaseResponse;
+    [property: JsonPropertyName("games")] IReadOnlyList<PlayedGames> PlayedGames) : BaseResponse;
 
 public record PlayedGames(
     [property: JsonPropertyName("date")] DateTime Date,
