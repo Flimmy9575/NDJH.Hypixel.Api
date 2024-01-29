@@ -26,5 +26,5 @@ public record Mayor(
     [property: JsonPropertyName("election")]
     Election Election);
 
-public record EletionsResponse(
+public record ElectionsResponse(
     [property: JsonPropertyName("mayor")] Mayor Mayor) : ResourcesBaseModel;

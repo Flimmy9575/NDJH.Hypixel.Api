@@ -46,6 +46,6 @@ public record Auction(
     int HighestBidAmount,
     [property: JsonPropertyName("bids")] IReadOnlyList<Bid> Bids);
 
-public record AuctionsResponse(
+public record AuctionResponse(
     [property: JsonPropertyName("auctions")]
     IReadOnlyList<Auction> Auctions) : ResourcesBaseModel;
