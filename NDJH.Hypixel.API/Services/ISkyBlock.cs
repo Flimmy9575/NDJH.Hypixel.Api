@@ -64,7 +64,7 @@ public interface ISkyBlock
     /// </summary>
     /// <param name="page">The page number of the auction list to retrieve.</param>
     /// <returns>A <see cref="AuctionResponse"/> object containing a list of active auctions.</returns>
-    public Task<AuctionResponse> GetActiveAuctionsAsync(int page);
+    public Task<AuctionsResponse> GetActiveAuctionsAsync(int page);
 
     /// <summary>
     /// Retrieves the history of ended auctions.
