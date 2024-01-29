@@ -1,5 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using System.Text.Json;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
+using NDJH.Hypixel.API.Exceptions;
 using NDJH.Hypixel.API.Models.SkyBlock;
 
 namespace NDJH.Hypixel.API.Services;
@@ -18,15 +20,10 @@ public class SkyBlock : ISkyBlock
     public static ISkyBlock Create(HttpClient httpClient, ILogger<SkyBlock>? logger = null) =>
         new SkyBlock(httpClient, logger ?? NullLogger<SkyBlock>.Instance);
 
-    public Task<CollectionResponse> GetCollectionsAsync()
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<CollectionResponse> GetCollectionsAsync() =>
+        await RequestAndSerializeResponseAsync<CollectionResponse>("/recources/skyblock/collections");
 
-    public Task<SkillsResponse> GetSkillsAsync()
-    {
-        throw new NotImplementedException();
-    private async Task<TResponse> RequestAndSerializeResponse<TResponse>(string url)
+    private async Task<TResponse> RequestAndSerializeResponseAsync<TResponse>(string url)
     {
         try
         {
@@ -34,6 +31,7 @@ public class SkyBlock : ISkyBlock
 
             // Sending GET request to the collections endpoint
             var response = await __httpClient.GetAsync(url);
+
 
             // if the HTTP response status is an error status, this will throw an exception
             response.EnsureSuccessStatusCode();
@@ -62,60 +60,39 @@ public class SkyBlock : ISkyBlock
             throw;
         }
     }
-    }
 
-    public Task<ItemsResponse> GetItemsAsync()
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<SkillsResponse> GetSkillsAsync() =>
+        await RequestAndSerializeResponseAsync<SkillsResponse>("/resources/skyblock/skills");
 
-    public Task<ElectionsResponse> GetElectionsAsync()
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<ItemsResponse> GetItemsAsync() =>
+        await RequestAndSerializeResponseAsync<ItemsResponse>("/resources/skyblock/items");
 
-    public Task<BingoResponse> GetBingoAsync()
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<ElectionsResponse> GetElectionsAsync() =>
+        await RequestAndSerializeResponseAsync<ElectionsResponse>("/resources/skyblock/election");
 
-    public Task<NewsResponse> GetNewsAsync()
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<BingoResponse> GetBingoAsync() =>
+        await RequestAndSerializeResponseAsync<BingoResponse>("/resources/skyblock/bingo");
 
-    public Task<AuctionResponse> GetAuctionAsync(string input, InputType inputType)
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<NewsResponse> GetNewsAsync() =>
+        await RequestAndSerializeResponseAsync<NewsResponse>("/resources/skyblock/news");
 
-    public Task<AuctionResponse> GetActiveAuctionsAsync(int page)
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<AuctionResponse> GetAuctionAsync(string input, InputType inputType) =>
+        await RequestAndSerializeResponseAsync<AuctionResponse>($"/skyblock/auction?{inputType}={input}");
 
-    public Task<AuctionsHistoryResponse> GetAuctionsHistoryAsync()
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<AuctionsResponse> GetActiveAuctionsAsync(int page) =>
+        await RequestAndSerializeResponseAsync<AuctionsResponse>($"/skyblock/auctions?page={page}");
 
-    public Task<BazaarResponse> GetBazaarAsync()
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<AuctionsHistoryResponse> GetAuctionsHistoryAsync() =>
+        await RequestAndSerializeResponseAsync<AuctionsHistoryResponse>("/skyblock/auctions_ended");
 
-    public Task<ProfileResponse> GetProfileAsync(string profileId)
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<BazaarResponse> GetBazaarAsync() =>
+        await RequestAndSerializeResponseAsync<BazaarResponse>("skyblock/bazaar");
 
-    public Task<ProfilesResponse> GetProfilesAsync(string uuid)
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<ProfileResponse> GetProfileAsync(string profileId) =>
+        await RequestAndSerializeResponseAsync<ProfileResponse>("/skyblock/profile");
 
-    public Task<BingoCompletionsResponse> GetBingoCompletionsAsync(string uuid)
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<ProfilesResponse> GetProfilesAsync(string uuid) => await RequestAndSerializeResponseAsync<ProfilesResponse>("/skyblock/profiles");
+
+    public async Task<BingoCompletionsResponse> GetBingoCompletionsAsync(string uuid) =>
+        await RequestAndSerializeResponseAsync<BingoCompletionsResponse>($"/skyblock/bingo?uuid={uuid}");
 }
