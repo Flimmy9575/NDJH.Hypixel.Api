@@ -3,11 +3,6 @@ using Microsoft.Extensions.Logging.Abstractions;
 
 namespace NDJH.Hypixel.API.Services;
 
-public interface IPlayerData
-{
-    
-}
-
 public class PlayerData : IPlayerData
 {
     private readonly HttpClient _httpClient;
