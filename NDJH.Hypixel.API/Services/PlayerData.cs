@@ -1,19 +1,19 @@
-﻿using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
+﻿using Microsoft.Extensions.Logging.Abstractions;
+using NDJH.Hypixel.API.Models.PlayerData;
 
 namespace NDJH.Hypixel.API.Services;
 
-public class PlayerData : IPlayerData
+public class PlayerData(IHttpDeserializerService httpRequestAndDeserializer) : IPlayerData
 {
-    private readonly HttpClient _httpClient;
-    private readonly ILogger<IPlayerData> _logger; 
+    public async Task<Player> GetPlayerAsync(string uuid) =>
+        await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<Player>("/player");
 
-    public PlayerData(HttpClient httpClient, ILogger<IPlayerData> logger)
-    {
-        _httpClient = httpClient;
-        _logger = logger;
-    }
-    
-    public static IPlayerData Create(HttpClient httpClient, ILogger<PlayerData>? logger = null) =>
-        new PlayerData(httpClient, logger ?? NullLogger<PlayerData>.Instance);
+    public async Task<RecentGamesResponse> GetRecentGamesResponseAsync(string uuid) =>
+        await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<RecentGamesResponse>("/recentgames");
+
+    public async Task<StatusResponse> GetStatusResponseAsync(string uuid) =>
+        await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<StatusResponse>("/status");
+
+    public async Task<GuildResponse> GetGuildResponseAsync(string input, InputType inputType) =>
+        await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<GuildResponse>("guild");
 }
