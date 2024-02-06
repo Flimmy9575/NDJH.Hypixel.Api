@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Logging.Abstractions;
-using NDJH.Hypixel.API.Models.PlayerData;
+﻿using NDJH.Hypixel.API.Models.PlayerData;
 
 namespace NDJH.Hypixel.API.Services;
 
@@ -8,12 +7,12 @@ public class PlayerData(IHttpDeserializerService httpRequestAndDeserializer) : I
     public async Task<Player> GetPlayerAsync(string uuid) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<Player>("/player");
 
-    public async Task<RecentGamesResponse> GetRecentGamesResponseAsync(string uuid) =>
+    public async Task<RecentGamesResponse> GetRecentGamesAsync(string uuid) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<RecentGamesResponse>("/recentgames");
 
-    public async Task<StatusResponse> GetStatusResponseAsync(string uuid) =>
+    public async Task<StatusResponse> GetStatusAsync(string uuid) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<StatusResponse>("/status");
 
-    public async Task<GuildResponse> GetGuildResponseAsync(string input, InputType inputType) =>
+    public async Task<GuildResponse> GetGuildAsync(string input, InputType inputType) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<GuildResponse>("guild");
 }
