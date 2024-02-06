@@ -50,10 +50,10 @@ public class HypixelWrapper : IHypixelWrapper
         httpClient = HttpClientConfiguration.HttpClient;
 
         // Creating services
-        OtherService = Other.Create(httpClient, loggerFactory?.CreateLogger<Other>());
-        SkyBlockService = SkyBlock.Create(httpClient, loggerFactory?.CreateLogger<SkyBlock>());
-        PlayerDataService = PlayerData.Create(httpClient, loggerFactory?.CreateLogger<PlayerData>());
-        ResourceService = Resource.Create(httpClient, loggerFactory?.CreateLogger<Resource>());
+        // OtherService = Other.Create(httpClient, loggerFactory?.CreateLogger<Other>());
+        // SkyBlockService = new SkyBlock(httpClient, loggerFactory?.CreateLogger<SkyBlock>(), new HttpDeserializerService(httpClient, loggerFactory?.CreateLogger<HttpDeserializerService>()));
+        // PlayerDataService = new PlayerData();
+        // ResourceService = Resource.Create(httpClient, loggerFactory?.CreateLogger<Resource>());
     }
 
     /// <summary>
