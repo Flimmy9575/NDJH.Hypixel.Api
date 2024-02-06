@@ -2,7 +2,7 @@
 
 namespace NDJH.Hypixel.API.Models.PlayerData;
 
-public record Status([property: JsonPropertyName("session")] Session Session) : BaseResponse;
+public record StatusResponse([property: JsonPropertyName("session")] Session Session) : BaseResponse;
 
 public record Session(
     [property: JsonPropertyName("online")] bool Online,

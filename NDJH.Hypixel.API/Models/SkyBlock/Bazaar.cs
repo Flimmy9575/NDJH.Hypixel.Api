@@ -39,6 +39,6 @@ public record Product(
     [property: JsonPropertyName("quick_status")]
     QuickStatus QuickStatus);
 
-public record ProductsResponse(
+public record BazaarResponse(
     [property: JsonPropertyName("products")]
     Dictionary<string, Product> Products) : ResourcesBaseModel;

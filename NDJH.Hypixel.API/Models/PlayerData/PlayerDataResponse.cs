@@ -1092,9 +1092,6 @@ public record Player(
     [property: JsonPropertyName("leveling")]
     Leveling leveling,
     
-    [property: JsonPropertyName("seasonal")]
-    Seasonal seasonal,
-    
     [property: JsonPropertyName("mostRecentGameType")]
     string mostRecentGameType
 );

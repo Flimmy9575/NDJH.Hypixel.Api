@@ -1,23 +1,18 @@
-﻿using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
-
-namespace NDJH.Hypixel.API.Services;
+﻿namespace NDJH.Hypixel.API.Services;
 
 public interface IOther
 {
+    public Task GetBoosters();
+    public Task GetPlayerCounts();
+    public Task GetLeaderboards();
+    public Task GetPunishmentStats();
 }
 
-public class Other : IOther
+public class Other(IHttpDeserializerService httpRequestAndDeserializer) : IOther
 {
-    private readonly HttpClient _httpClient;
-    private readonly ILogger<IOther> _logger;
+    public Task GetBoosters() => throw new NotSupportedException();
 
-    public Other(HttpClient httpClient, ILogger<IOther> logger)
-    {
-        _httpClient = httpClient;
-        _logger = logger;
-    }
-
-    public static IOther Create(HttpClient httpClient, ILogger<Other>? logger = null) =>
-        new Other(httpClient, logger ?? NullLogger<Other>.Instance);
+    public Task GetPlayerCounts() => throw new NotSupportedException();
+    public Task GetLeaderboards() => throw new NotSupportedException();
+    public Task GetPunishmentStats() => throw new NotSupportedException();
 }
