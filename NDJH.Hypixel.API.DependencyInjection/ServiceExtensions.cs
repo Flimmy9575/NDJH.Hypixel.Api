@@ -1,5 +1,4 @@
-﻿using System.Net.Http.Headers;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NDJH.Hypixel.API.Configuration;
 using NDJH.Hypixel.API.Exceptions;
