@@ -11,7 +11,7 @@ public static class ServiceExtensions
     public static IServiceCollection AddHypixel(this IServiceCollection services, IConfiguration config)
     {
         // retrieving Config
-        var hypixelConfigSection = config.GetSection("hypixel");
+        var hypixelConfigSection = config.GetSection("Hypixel");
 
         if (hypixelConfigSection.Exists())
         {
@@ -30,7 +30,7 @@ public static class ServiceExtensions
 
 
             // Setting up HttpClient
-            services.AddHttpClient<IHypixelWrapper, HypixelWrapper>(client =>
+            services.AddHttpClient<IHttpDeserializerService, HttpDeserializerService>(client =>
                 HttpClientConfiguration.ConfigureHttpClientDefault(client, hypixelConfig));
 
             // The services for the api wrapper
