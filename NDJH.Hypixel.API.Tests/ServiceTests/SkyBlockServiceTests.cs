@@ -70,7 +70,7 @@ public class SkyBlockServiceTests
         await _skyBlockService.GetAuctionAsync(TestConstants.Uuid.ToString(), inputType);
         await _httpRequestAndDeserializer.Received()
             .RequestAndSerializeResponseAsync<AuctionResponse>(
-                $"/skyblock/auction?{inputType.ToString().ToLower()}={TestConstants.Uuid.ToString()}");
+                $"/skyblock/auction?{inputType.ToString()}={TestConstants.Uuid.ToString()}");
     }
 
     [Fact]
@@ -95,7 +95,7 @@ public class SkyBlockServiceTests
     {
         await _skyBlockService.GetBazaarAsync();
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<BazaarResponse>("/skyblock/bazaar");
+            .RequestAndSerializeResponseAsync<BazaarResponse>("skyblock/bazaar");
     }
 
     [Fact]
@@ -121,6 +121,6 @@ public class SkyBlockServiceTests
         await _skyBlockService.GetBingoCompletionsAsync(TestConstants.Uuid.ToString());
         await _httpRequestAndDeserializer.Received()
             .RequestAndSerializeResponseAsync<BingoCompletionsResponse>(
-                $"/skyblock/bingo?TestConstants.Uuid.ToString()={TestConstants.Uuid.ToString()}");
+                $"/skyblock/bingo?uuid={TestConstants.Uuid.ToString()}");
     }
 }

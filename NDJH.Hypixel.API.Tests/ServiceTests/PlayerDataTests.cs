@@ -47,6 +47,6 @@ public class PlayerDataServiceTests
         const InputType inputType = InputType.Player;
         await _playerData.GetGuildAsync(input, inputType);
 
-        await _httpRequestAndDeserializer.Received().RequestAndSerializeResponseAsync<GuildResponse>("/guild");
+        await _httpRequestAndDeserializer.Received().RequestAndSerializeResponseAsync<GuildResponse>("guild");
     }
 }
