@@ -20,7 +20,8 @@ public class PlayerDataServiceTests
     {
         await _playerData.GetPlayerAsync(TestConstants.Uuid.ToString());
 
-        await _httpRequestAndDeserializer.Received().RequestAndSerializeResponseAsync<Player>("/player");
+        await _httpRequestAndDeserializer.Received()
+            .RequestAndSerializeResponseAsync<Player>($"player?uuid={TestConstants.Uuid}");
     }
 
     [Fact]
@@ -29,7 +30,7 @@ public class PlayerDataServiceTests
         await _playerData.GetRecentGamesAsync(TestConstants.Uuid.ToString());
 
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<RecentGamesResponse>("/recentgames");
+            .RequestAndSerializeResponseAsync<RecentGamesResponse>($"recentgames?uuid={TestConstants.Uuid}");
     }
 
     [Fact]
@@ -37,7 +38,8 @@ public class PlayerDataServiceTests
     {
         await _playerData.GetStatusAsync(TestConstants.Uuid.ToString());
 
-        await _httpRequestAndDeserializer.Received().RequestAndSerializeResponseAsync<StatusResponse>("/status");
+        await _httpRequestAndDeserializer.Received()
+            .RequestAndSerializeResponseAsync<StatusResponse>($"status?uuid={TestConstants.Uuid}");
     }
 
     [Fact]
@@ -47,6 +49,7 @@ public class PlayerDataServiceTests
         const InputType inputType = InputType.Player;
         await _playerData.GetGuildAsync(input, inputType);
 
-        await _httpRequestAndDeserializer.Received().RequestAndSerializeResponseAsync<GuildResponse>("guild");
+        await _httpRequestAndDeserializer.Received()
+            .RequestAndSerializeResponseAsync<GuildResponse>($"guild?{inputType}={input}");
     }
 }
