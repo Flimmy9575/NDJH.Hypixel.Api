@@ -1,0 +1,43 @@
+name: Publish
+
+on:
+  release:
+    types: [ published ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore
+
+      - name: Test
+        run: dotnet test --no-build --verbosity normal
+      
+      # Packing the first package
+      - name: Publish Base Package
+        run: dotnet pack "NDJH.Hypixel.API\NDJH.Hypixel.API.csproj" --no-build -c Release -o ./output
+        id: package1
+
+      
+      # Packing the second package
+      - name: Publish DI Package
+        run: dotnet pack "NDJH.Hypixel.API.DependencyInjection\NDJH.Hypixel.API.DependencyInjection.csproj" --no-build -c Release -o ./output
+        id: package2
+
+      # Pushing packages to nuget
+      - name: Push NuGet packages
+        run: dotnet nuget push "./output/*.nupkg" --api-key ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json

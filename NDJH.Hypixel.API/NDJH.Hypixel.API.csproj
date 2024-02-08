@@ -4,6 +4,14 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>NDJH.Hypixel.API</Title>
+        <Authors>Dante Hasty</Authors>
+        <PackageProjectUrl>https://github.com/Flimmy9575/NDJH.Hypixel.Api</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/Flimmy9575/NDJH.Hypixel.Api/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/Flimmy9575/NDJH.Hypixel.Api</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>hypixel</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
