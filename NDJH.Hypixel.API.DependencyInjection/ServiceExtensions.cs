@@ -30,7 +30,7 @@ public static class ServiceExtensions
 
 
             // Setting up HttpClient
-            services.AddHttpClient<IHypixelWrapper, HypixelWrapper>(client =>
+            services.AddHttpClient<IHttpDeserializerService, HttpDeserializerService>(client =>
                 HttpClientConfiguration.ConfigureHttpClientDefault(client, hypixelConfig));
 
             // The services for the api wrapper
