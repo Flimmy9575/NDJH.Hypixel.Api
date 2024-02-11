@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NDJH.Hypixel.API.Configuration;
 using NDJH.Hypixel.API.Exceptions;
 using NDJH.Hypixel.API.Services;
-using NDJH.Hypixel.API.Services.interfaces;
+using NDJH.Hypixel.API.Services.Abstractions;
 
 namespace NDJH.Hypixel.API.DependencyInjection;
 

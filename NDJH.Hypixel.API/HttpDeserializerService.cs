@@ -6,7 +6,7 @@ namespace NDJH.Hypixel.API;
 
 public interface IHttpDeserializerService
 {
-    public Task<TResponse> RequestAndSerializeResponseAsync<TResponse>(string url);
+    public Task<TResponse> RequestAndSerializeResponseAsync<TResponse>(string url, CancellationToken cancellationToken);
 }
 
 public class HttpDeserializerService : IHttpDeserializerService
@@ -20,21 +20,24 @@ public class HttpDeserializerService : IHttpDeserializerService
         _logger = logger;
     }
 
-    public async Task<TResponse> RequestAndSerializeResponseAsync<TResponse>(string url)
+
+    public async Task<TResponse> RequestAndSerializeResponseAsync<TResponse>(string url,
+        CancellationToken cancellationToken)
     {
         try
         {
             _logger.LogTrace("Requesting to {Path}.", url);
             // Sending GET request to the collections endpoint
-            var response = await _httpClient.GetAsync(url);
+            var response = await _httpClient.GetAsync(url, cancellationToken);
 
             // if the HTTP response status is an error status, this will throw an exception
             response.EnsureSuccessStatusCode();
             _logger.LogTrace("Received {Path} response. Deserializing.", url);
             // Read the response content as a stream
-            var responseStream = await response.Content.ReadAsStreamAsync();
+            var responseStream = await response.Content.ReadAsStreamAsync(cancellationToken);
             // Deserialize the response content stream into a CollectionResponse object
             var data = await JsonSerializer.DeserializeAsync<TResponse>(responseStream);
+
             if (data is null)
             {
                 throw new ApiResponseNullException(
