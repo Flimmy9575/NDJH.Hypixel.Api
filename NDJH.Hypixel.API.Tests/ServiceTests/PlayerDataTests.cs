@@ -21,7 +21,7 @@ public class PlayerDataServiceTests
         await _playerData.GetPlayerAsync(TestConstants.Uuid.ToString());
 
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<Player>($"player?uuid={TestConstants.Uuid}");
+            .RequestAndSerializeResponseAsync<Player>($"player?uuid={TestConstants.Uuid}", CancellationToken.None);
     }
 
     [Fact]
@@ -30,7 +30,8 @@ public class PlayerDataServiceTests
         await _playerData.GetRecentGamesAsync(TestConstants.Uuid.ToString());
 
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<RecentGamesResponse>($"recentgames?uuid={TestConstants.Uuid}");
+            .RequestAndSerializeResponseAsync<RecentGamesResponse>($"recentgames?uuid={TestConstants.Uuid}",
+                CancellationToken.None);
     }
 
     [Fact]
@@ -39,7 +40,8 @@ public class PlayerDataServiceTests
         await _playerData.GetStatusAsync(TestConstants.Uuid.ToString());
 
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<StatusResponse>($"status?uuid={TestConstants.Uuid}");
+            .RequestAndSerializeResponseAsync<StatusResponse>($"status?uuid={TestConstants.Uuid}",
+                CancellationToken.None);
     }
 
     [Fact]
@@ -50,6 +52,6 @@ public class PlayerDataServiceTests
         await _playerData.GetGuildAsync(input, inputType);
 
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<GuildResponse>($"guild?{inputType}={input}");
+            .RequestAndSerializeResponseAsync<GuildResponse>($"guild?{inputType}={input}", CancellationToken.None);
     }
 }

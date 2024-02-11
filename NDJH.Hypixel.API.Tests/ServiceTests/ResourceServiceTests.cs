@@ -20,7 +20,7 @@ public class ResourceServiceTests
     {
         await _resourceService.GetAchievementsAsync();
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<AchievementResponse>("/resources/achievements");
+            .RequestAndSerializeResponseAsync<AchievementResponse>("/resources/achievements", CancellationToken.None);
     }
 
     [Fact]
@@ -28,7 +28,7 @@ public class ResourceServiceTests
     {
         await _resourceService.GetChallengesAsync();
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<ChallengesResponse>("/resources/challenges");
+            .RequestAndSerializeResponseAsync<ChallengesResponse>("/resources/challenges", CancellationToken.None);
     }
 
     [Fact]
@@ -36,7 +36,7 @@ public class ResourceServiceTests
     {
         await _resourceService.GetQuestsAsync();
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<QuestsResponse>("/resources/quests");
+            .RequestAndSerializeResponseAsync<QuestsResponse>("/resources/quests", CancellationToken.None);
     }
 
     [Fact]
@@ -44,7 +44,8 @@ public class ResourceServiceTests
     {
         await _resourceService.GetGuildAchievementsAsync();
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<GuildAchievementResponse>("/resources/guilds/achievements");
+            .RequestAndSerializeResponseAsync<GuildAchievementResponse>("/resources/guilds/achievements",
+                CancellationToken.None);
     }
 
     [Fact]
@@ -52,7 +53,8 @@ public class ResourceServiceTests
     {
         await _resourceService.GetVanityPetsInformationAsync();
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<VanityPetsAndCompanionsResponse>("/resources/vanity/pets");
+            .RequestAndSerializeResponseAsync<VanityPetsAndCompanionsResponse>("/resources/vanity/pets",
+                CancellationToken.None);
     }
 
     [Fact]
@@ -60,6 +62,7 @@ public class ResourceServiceTests
     {
         await _resourceService.GetCompanionInformationAsync();
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<VanityPetsAndCompanionsResponse>("/resources/vanity/companions");
+            .RequestAndSerializeResponseAsync<VanityPetsAndCompanionsResponse>("/resources/vanity/companions",
+                CancellationToken.None);
     }
 }
