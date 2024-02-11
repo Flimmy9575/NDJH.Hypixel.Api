@@ -1,4 +1,5 @@
 ﻿using NDJH.Hypixel.API.Models.PlayerData;
+using NDJH.Hypixel.API.Services.interfaces;
 
 namespace NDJH.Hypixel.API.Services;
 

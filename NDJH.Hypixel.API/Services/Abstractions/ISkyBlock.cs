@@ -1,6 +1,6 @@
 ﻿using NDJH.Hypixel.API.Models.SkyBlock;
 
-namespace NDJH.Hypixel.API.Services;
+namespace NDJH.Hypixel.API.Services.interfaces;
 
 public interface ISkyBlock
 {

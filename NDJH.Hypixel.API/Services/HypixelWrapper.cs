@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using NDJH.Hypixel.API.Configuration;
+using NDJH.Hypixel.API.Services.interfaces;
 
 namespace NDJH.Hypixel.API.Services;
 
@@ -16,13 +17,6 @@ public interface IHypixelWrapper
 /// </summary>
 public class HypixelWrapper : IHypixelWrapper
 {
-    public IOther OtherService { get; }
-    public ISkyBlock SkyBlockService { get; }
-    public IPlayerData PlayerDataService { get; }
-    public IResource ResourceService { get; }
-
-
-
     // DI Container
     /// <summary>
     /// Represents a wrapper class for the Hypixel API services.
@@ -37,16 +31,18 @@ public class HypixelWrapper : IHypixelWrapper
         ResourceService = resourcesService;
     }
 
-    
-    public HypixelWrapper(HypixelConfiguration config, HttpClient? httpClient = null, ILoggerFactory? loggerFactory = null)
+
+    public HypixelWrapper(HypixelConfiguration config, HttpClient? httpClient = null,
+        ILoggerFactory? loggerFactory = null)
     {
         // Setting up HTTP
         if (HttpClientConfiguration.HttpClient is null && httpClient is null)
         {
-            HttpClientConfiguration.HttpClient = HttpClientConfiguration.ConfigureHttpClientDefault(new HttpClient(), config);
+            HttpClientConfiguration.HttpClient =
+                HttpClientConfiguration.ConfigureHttpClientDefault(new HttpClient(), config);
         }
-        
-        
+
+
         httpClient = HttpClientConfiguration.HttpClient;
 
         // Creating services
@@ -56,6 +52,11 @@ public class HypixelWrapper : IHypixelWrapper
         // ResourceService = Resource.Create(httpClient, loggerFactory?.CreateLogger<Resource>());
     }
 
+    public IOther OtherService { get; }
+    public ISkyBlock SkyBlockService { get; }
+    public IPlayerData PlayerDataService { get; }
+    public IResource ResourceService { get; }
+
     /// <summary>
     /// Creates an instance of the HypixelWrapper class for interacting with the Hypixel API.
     /// </summary>
@@ -63,6 +64,7 @@ public class HypixelWrapper : IHypixelWrapper
     /// <param name="loggerFactory">Optional logger factory for logging purposes.</param>
     /// <returns>An instance of the HypixelWrapper class.</returns>
     /// <remarks> Currently this just calls the <see cref="HypixelWrapper"/> second constructor. </remarks>
-    public static HypixelWrapper Create(HypixelConfiguration config, HttpClient? httpClient = null, LoggerFactory loggerFactory = null) =>
+    public static HypixelWrapper Create(HypixelConfiguration config, HttpClient? httpClient = null,
+        LoggerFactory loggerFactory = null) =>
         new(config, httpClient, loggerFactory);
 }

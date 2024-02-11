@@ -1,12 +1,6 @@
-﻿namespace NDJH.Hypixel.API.Services;
+﻿using NDJH.Hypixel.API.Services.interfaces;
 
-public interface IOther
-{
-    public Task GetBoosters();
-    public Task GetPlayerCounts();
-    public Task GetLeaderboards();
-    public Task GetPunishmentStats();
-}
+namespace NDJH.Hypixel.API.Services;
 
 public class Other(IHttpDeserializerService httpRequestAndDeserializer) : IOther
 {
