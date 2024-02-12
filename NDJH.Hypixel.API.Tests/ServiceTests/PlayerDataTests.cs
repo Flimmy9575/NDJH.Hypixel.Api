@@ -1,5 +1,6 @@
 ﻿using NDJH.Hypixel.API.Models.PlayerData;
 using NDJH.Hypixel.API.Services;
+using NDJH.Hypixel.API.Services.Abstractions;
 using NSubstitute;
 
 namespace NDJH.Hypixel.API.Tests.ServiceTests;

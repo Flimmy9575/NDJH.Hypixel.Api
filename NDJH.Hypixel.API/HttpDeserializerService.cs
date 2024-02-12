@@ -1,56 +1,98 @@
-﻿using System.Text.Json;
+﻿using System.Net;
+using System.Text.Json;
 using Microsoft.Extensions.Logging;
 using NDJH.Hypixel.API.Exceptions;
+using NDJH.Hypixel.API.Models;
+using NDJH.Hypixel.API.Services.Abstractions;
 
 namespace NDJH.Hypixel.API;
 
-public interface IHttpDeserializerService
+public class HttpDeserializerService(HttpClient httpClient, ILogger<HttpDeserializerService> logger)
+    : IHttpDeserializerService
 {
-    public Task<TResponse> RequestAndSerializeResponseAsync<TResponse>(string url, CancellationToken cancellationToken);
-}
-
-public class HttpDeserializerService : IHttpDeserializerService
-{
-    private readonly HttpClient _httpClient;
-    private readonly ILogger<HttpDeserializerService> _logger;
-
-    public HttpDeserializerService(HttpClient httpClient, ILogger<HttpDeserializerService> logger)
-    {
-        _httpClient = httpClient;
-        _logger = logger;
-    }
-
-
+    /// <summary>
+    /// Sends an HTTP request to the specified URL and deserializes the response into the specified type.
+    /// </summary>
+    /// <typeparam name="TResponse">The type to deserialize the response into.</typeparam>
+    /// <param name="url">The URL to send the HTTP request to.</param>
+    /// <param name="cancellationToken">A cancellation token to cancel the operation if necessary.</param>
+    /// <returns>A task that represents the asynchronous operation. The task result contains the deserialized response.</returns>
+    /// <exception cref="ApiResponseNullException">Thrown when the API response is null.</exception>
+    /// <exception cref="ApiException">Thrown when an API error occurs.</exception>
     public async Task<TResponse> RequestAndSerializeResponseAsync<TResponse>(string url,
         CancellationToken cancellationToken)
     {
-        try
+        var response = await GetResponseAndLogStepsAsync(url, cancellationToken);
+        var content = await response.Content.ReadAsStringAsync(cancellationToken);
+
+        var errorData = ReadAndDeserializeDataAsync<ApiErrorModel>(content);
+        HandleErrorStatusCode(response.StatusCode, errorData);
+
+        logger.LogTrace("Received {Path} response. Deserializing", url);
+        var data = ReadAndDeserializeDataAsync<TResponse>(content);
+        return data;
+    }
+
+    private async Task<HttpResponseMessage> GetResponseAndLogStepsAsync(string url, CancellationToken cancellationToken)
+    {
+        logger.LogTrace("Requesting to {Path}.", url);
+        var response = await httpClient.GetAsync(url, cancellationToken);
+        var content = await response.Content.ReadAsStringAsync(cancellationToken);
+        logger.LogTrace("Hypixel returned an {StatusCode} with the response of: {Response}", response.StatusCode,
+            content);
+        return response;
+    }
+
+    private TResponse ReadAndDeserializeDataAsync<TResponse>(string content)
+    {
+        // Reading and deserializing data from server response.
+        var data = JsonSerializer.Deserialize<TResponse>(content);
+
+        if (data is null)
         {
-            _logger.LogTrace("Requesting to {Path}.", url);
-            // Sending GET request to the collections endpoint
-            var response = await _httpClient.GetAsync(url, cancellationToken);
-
-            // if the HTTP response status is an error status, this will throw an exception
-            response.EnsureSuccessStatusCode();
-            _logger.LogTrace("Received {Path} response. Deserializing.", url);
-            // Read the response content as a stream
-            var responseStream = await response.Content.ReadAsStreamAsync(cancellationToken);
-            // Deserialize the response content stream into a CollectionResponse object
-            var data = await JsonSerializer.DeserializeAsync<TResponse>(responseStream);
-
-            if (data is null)
-            {
-                throw new ApiResponseNullException(
-                    $"Deserialization resulted in null. {typeof(TResponse)} object is not received as expected from the API.");
-            }
-
-            _logger.LogTrace("Deserialization complete.");
-            return data;
+            var dataType = typeof(TResponse).Name;
+            logger.LogError($"Failed to deserialize data of type {dataType}");
+            throw new ApiResponseNullException($"Error: Deserialized data of type {dataType} was null.");
         }
-        catch (Exception e)
+
+        return data;
+    }
+
+    private void HandleErrorStatusCode(HttpStatusCode statusCode, ApiErrorModel errorData)
+    {
+        string logMessage;
+        switch (statusCode)
         {
-            _logger.LogError(e, "Error retrieving information from Hypixel API({Path}).", url);
-            throw;
+            case HttpStatusCode.BadRequest:
+                logMessage = "Hypixel returned Bad Request: {Cause}";
+                break;
+            case HttpStatusCode.Forbidden:
+                logMessage = "Potentially invalid API Key: {Cause}";
+                break;
+            case HttpStatusCode.UnprocessableContent:
+                logMessage = "Sent data is invalid: {Cause}";
+                break;
+            case HttpStatusCode.TooManyRequests:
+                var global = "Unknown";
+                if (errorData.Global.HasValue)
+                {
+                    global = errorData.Global.Value ? "is" : "isn't";
+                }
+
+                logMessage = "Rate limit hit. The throttle {Global} global";
+                logger.LogWarning(logMessage, global);
+                break;
+            default:
+                logMessage = "An unidentified error has occured: {Cause}";
+                break;
         }
+
+        // Global let's the client know if the rate limit is global or not.
+        if (statusCode != HttpStatusCode.TooManyRequests)
+        {
+            logger.LogError(logMessage, errorData.Cause);
+        }
+
+        throw new ApiException((int)statusCode, errorData.Cause);
     }
 }

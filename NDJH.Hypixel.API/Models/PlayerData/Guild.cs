@@ -22,10 +22,10 @@ public record Rank(
     int Priority);
 
 public record Guild(
-    [property: JsonPropertyName("_id")] string _Id,
+    [property: JsonPropertyName("_id")] string Id,
     [property: JsonPropertyName("name")] string Name,
     [property: JsonPropertyName("name_lower")]
-    string Name_lower,
+    string NameLowerCase,
     [property: JsonPropertyName("coins")] int Coins,
     [property: JsonPropertyName("coinsEver")]
     int CoinsEver,
