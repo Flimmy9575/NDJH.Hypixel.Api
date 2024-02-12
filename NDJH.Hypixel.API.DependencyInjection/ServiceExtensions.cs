@@ -40,6 +40,10 @@ public static class ServiceExtensions
             services.AddSingleton<ISkyBlock, SkyBlock>();
             services.AddSingleton<IResource, Resource>();
             services.AddSingleton<IOther, Other>();
+
+
+            // Other
+            services.AddSingleton<IRateLimitService, RateLimitService>();
         }
         else
         {
