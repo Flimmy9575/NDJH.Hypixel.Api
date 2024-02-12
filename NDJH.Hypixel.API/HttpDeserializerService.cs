@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using System.Net.Http.Headers;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
 using NDJH.Hypixel.API.Exceptions;
@@ -7,7 +8,11 @@ using NDJH.Hypixel.API.Services.Abstractions;
 
 namespace NDJH.Hypixel.API;
 
-public class HttpDeserializerService(HttpClient httpClient, ILogger<HttpDeserializerService> logger)
+public class HttpDeserializerService(
+    HttpClient httpClient,
+    ILogger<HttpDeserializerService> logger,
+    IRateLimitService rateLimitService
+)
     : IHttpDeserializerService
 {
     /// <summary>
@@ -22,6 +27,7 @@ public class HttpDeserializerService(HttpClient httpClient, ILogger<HttpDeserial
     public async Task<TResponse> RequestAndSerializeResponseAsync<TResponse>(string url,
         CancellationToken cancellationToken)
     {
+        await rateLimitService.WaitForRateLimitAsync(cancellationToken);
         var response = await GetResponseAndLogStepsAsync(url, cancellationToken);
         var content = await response.Content.ReadAsStringAsync(cancellationToken);
 
@@ -40,7 +46,32 @@ public class HttpDeserializerService(HttpClient httpClient, ILogger<HttpDeserial
         var content = await response.Content.ReadAsStringAsync(cancellationToken);
         logger.LogTrace("Hypixel returned an {StatusCode} with the response of: {Response}", response.StatusCode,
             content);
+
+        // Settings remaining request and cooldown.
+        SetRemainingLimits(response.Headers);
+
+
         return response;
+    }
+
+    private void SetRemainingLimits(HttpResponseHeaders headers)
+    {
+        var remainingRequests = 0;
+        var resetTime = new DateTime();
+
+        // Parse rate limit headers from response
+        if (headers.TryGetValues("RateLimit-Remaining", out var remainingValues))
+        {
+            remainingRequests = int.Parse(remainingValues.First());
+        }
+
+        if (headers.TryGetValues("RateLimit-Reset", out var resetValues))
+        {
+            // The reset time is the current time plus the number of seconds until reset
+            resetTime = DateTime.Now.AddSeconds(int.Parse(resetValues.First()));
+        }
+
+        rateLimitService.SetRateLimit(remainingRequests, resetTime.Second);
     }
 
     private TResponse ReadAndDeserializeDataAsync<TResponse>(string content)
