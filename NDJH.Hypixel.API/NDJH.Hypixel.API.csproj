@@ -12,7 +12,7 @@
         <RepositoryUrl>https://github.com/Flimmy9575/NDJH.Hypixel.Api</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>hypixel</PackageTags>
-        <Version>1.0.3</Version>
+        <Version>1.1.0</Version>
     </PropertyGroup>
 
     <ItemGroup>
