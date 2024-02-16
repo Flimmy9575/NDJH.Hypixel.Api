@@ -15,17 +15,17 @@ public record QuickStatus(
     [property: JsonPropertyName("sellPrice")]
     double SellPrice,
     [property: JsonPropertyName("sellVolume")]
-    int SellVolume,
+    double SellVolume,
     [property: JsonPropertyName("sellMovingWeek")]
-    int SellMovingWeek,
+    double SellMovingWeek,
     [property: JsonPropertyName("sellOrders")]
     int SellOrders,
     [property: JsonPropertyName("buyPrice")]
     double BuyPrice,
     [property: JsonPropertyName("buyVolume")]
-    int BuyVolume,
+    double BuyVolume,
     [property: JsonPropertyName("buyMovingWeek")]
-    int BuyMovingWeek,
+    double BuyMovingWeek,
     [property: JsonPropertyName("buyOrders")]
     int BuyOrders);
 

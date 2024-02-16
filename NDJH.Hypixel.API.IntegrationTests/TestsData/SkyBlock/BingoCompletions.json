@@ -1,0 +1,17 @@
+﻿{
+  "success": true,
+  "events": [
+    {
+      "key": 25,
+      "points": 23,
+      "completed_goals": [
+        "stat_walk_speed",
+        "stat_health",
+        "KILL_GOBLINS_RAID",
+        "visit_zones",
+        "GET_SKILL_foraging_10",
+        "FIND_EXPERIMENT_PAIRS_1"
+      ]
+    }
+  ]
+}

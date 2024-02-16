@@ -1,6 +1,7 @@
 ﻿using NDJH.Hypixel.API.Models.PlayerData;
 using NDJH.Hypixel.API.Services;
 using NDJH.Hypixel.API.Services.Abstractions;
+using NDJH.Hypixel.API.Tests.Shared;
 using NSubstitute;
 
 namespace NDJH.Hypixel.API.Tests.ServiceTests;
@@ -53,6 +54,7 @@ public class PlayerDataServiceTests
         await _playerData.GetGuildAsync(input, inputType);
 
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<GuildResponse>($"guild?{inputType}={input}", CancellationToken.None);
+            .RequestAndSerializeResponseAsync<GuildResponse>($"guild?{inputType.ToString().ToLower()}={input}",
+                CancellationToken.None);
     }
 }

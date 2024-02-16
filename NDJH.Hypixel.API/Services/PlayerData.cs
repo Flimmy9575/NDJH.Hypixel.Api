@@ -35,5 +35,5 @@ public class PlayerData(IHttpDeserializerService httpRequestAndDeserializer) : I
     public async Task<GuildResponse> GetGuildAsync(string input, InputType inputType,
         CancellationToken cancellationToken) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<GuildResponse>(
-            $"guild?{inputType}={input}", cancellationToken);
+            $"guild?{inputType.ToString().ToLower()}={input}", cancellationToken);
 }

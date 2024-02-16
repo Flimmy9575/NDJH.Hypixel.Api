@@ -24,8 +24,18 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\NDJH.Hypixel.API.DependencyInjection\NDJH.Hypixel.API.DependencyInjection.csproj"/>
         <ProjectReference Include="..\NDJH.Hypixel.API.Tests.Shared\NDJH.Hypixel.API.Tests.Shared.csproj"/>
-      <ProjectReference Include="..\NDJH.Hypixel.API\NDJH.Hypixel.API.csproj" />
+        <ProjectReference Include="..\NDJH.Hypixel.API\NDJH.Hypixel.API.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="TestsData\**">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="TestsData\Player\PlayerData.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
 </Project>

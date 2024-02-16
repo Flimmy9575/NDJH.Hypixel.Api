@@ -12,7 +12,7 @@ public class SkyBlock(IHttpDeserializerService httpRequestAndDeserializer) : ISk
 
     public async Task<CollectionResponse> GetCollectionsAsync(CancellationToken cancellationToken) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<CollectionResponse>(
-            "/resources/skyblock/collections", cancellationToken);
+            "resources/skyblock/collections", cancellationToken);
 
 
     public async Task<SkillsResponse> GetSkillsAsync() =>
@@ -20,7 +20,7 @@ public class SkyBlock(IHttpDeserializerService httpRequestAndDeserializer) : ISk
 
     public async Task<SkillsResponse> GetSkillsAsync(CancellationToken cancellationToken) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<SkillsResponse>(
-            "/resources/skyblock/skills", cancellationToken);
+            "resources/skyblock/skills", cancellationToken);
 
 
     public async Task<ItemsResponse> GetItemsAsync() =>
@@ -28,7 +28,7 @@ public class SkyBlock(IHttpDeserializerService httpRequestAndDeserializer) : ISk
 
     public async Task<ItemsResponse> GetItemsAsync(CancellationToken cancellationToken) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<ItemsResponse>(
-            "/resources/skyblock/items", cancellationToken);
+            "resources/skyblock/items", cancellationToken);
 
 
     public async Task<ElectionsResponse> GetElectionsAsync() =>
@@ -36,7 +36,7 @@ public class SkyBlock(IHttpDeserializerService httpRequestAndDeserializer) : ISk
 
     public async Task<ElectionsResponse> GetElectionsAsync(CancellationToken cancellationToken) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<ElectionsResponse>(
-            "/resources/skyblock/election", cancellationToken);
+            "resources/skyblock/election", cancellationToken);
 
 
     public async Task<BingoResponse> GetBingoAsync() =>
@@ -44,14 +44,14 @@ public class SkyBlock(IHttpDeserializerService httpRequestAndDeserializer) : ISk
 
     public async Task<BingoResponse> GetBingoAsync(CancellationToken cancellationToken) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<BingoResponse>(
-            "/resources/skyblock/bingo", cancellationToken);
+            "resources/skyblock/bingo", cancellationToken);
 
 
     public async Task<NewsResponse> GetNewsAsync() =>
         await GetNewsAsync(CancellationToken.None);
 
     public async Task<NewsResponse> GetNewsAsync(CancellationToken cancellationToken) =>
-        await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<NewsResponse>("/resources/skyblock/news",
+        await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<NewsResponse>("skyblock/news",
             cancellationToken);
 
     #endregion Resources
@@ -64,7 +64,7 @@ public class SkyBlock(IHttpDeserializerService httpRequestAndDeserializer) : ISk
     public async Task<AuctionResponse> GetAuctionAsync(string input, InputType inputType,
         CancellationToken cancellationToken) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<AuctionResponse>(
-            $"/skyblock/auction?{inputType}={input}", cancellationToken);
+            $"skyblock/auction?{inputType.ToString().ToLower()}={input}", cancellationToken);
 
 
     public async Task<AuctionsResponse> GetActiveAuctionsAsync(int page) =>
@@ -72,7 +72,7 @@ public class SkyBlock(IHttpDeserializerService httpRequestAndDeserializer) : ISk
 
     public async Task<AuctionsResponse> GetActiveAuctionsAsync(int page, CancellationToken cancellationToken) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<AuctionsResponse>(
-            $"/skyblock/auctions?page={page}", cancellationToken);
+            $"skyblock/auctions?page={page}", cancellationToken);
 
 
     public async Task<AuctionsHistoryResponse> GetAuctionsHistoryAsync() =>
@@ -80,7 +80,7 @@ public class SkyBlock(IHttpDeserializerService httpRequestAndDeserializer) : ISk
 
     public async Task<AuctionsHistoryResponse> GetAuctionsHistoryAsync(CancellationToken cancellationToken) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<AuctionsHistoryResponse>(
-            "/skyblock/auctions_ended", cancellationToken);
+            "skyblock/auctions_ended", cancellationToken);
 
 
     public async Task<BazaarResponse> GetBazaarAsync() =>
@@ -95,7 +95,8 @@ public class SkyBlock(IHttpDeserializerService httpRequestAndDeserializer) : ISk
         await GetProfileAsync(profileId, CancellationToken.None);
 
     public async Task<ProfileResponse> GetProfileAsync(string profileId, CancellationToken cancellationToken) =>
-        await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<ProfileResponse>("/skyblock/profile",
+        await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<ProfileResponse>(
+            $"skyblock/profile?profile={profileId}",
             cancellationToken);
 
 
@@ -103,7 +104,8 @@ public class SkyBlock(IHttpDeserializerService httpRequestAndDeserializer) : ISk
         await GetProfilesAsync(uuid, CancellationToken.None);
 
     public async Task<ProfilesResponse> GetProfilesAsync(string uuid, CancellationToken cancellationToken) =>
-        await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<ProfilesResponse>("/skyblock/profiles",
+        await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<ProfilesResponse>(
+            $"skyblock/profiles?uuid={uuid}",
             cancellationToken);
 
 
@@ -113,7 +115,7 @@ public class SkyBlock(IHttpDeserializerService httpRequestAndDeserializer) : ISk
     public async Task<BingoCompletionsResponse> GetBingoCompletionsAsync(string uuid,
         CancellationToken cancellationToken) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<BingoCompletionsResponse>(
-            $"/skyblock/bingo?uuid={uuid}", cancellationToken);
+            $"skyblock/bingo?uuid={uuid}", cancellationToken);
 
     #endregion
 }

@@ -1,4 +1,4 @@
-﻿namespace NDJH.Hypixel.API.Tests;
+﻿namespace NDJH.Hypixel.API.Tests.Shared;
 
 public static class TestConstants
 {
