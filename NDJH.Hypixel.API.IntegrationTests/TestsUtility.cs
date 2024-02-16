@@ -11,9 +11,11 @@ public static class TestsUtility
     {
         var mockService = Substitute.For<IHttpDeserializerService>();
 
+        // Reading and Deserializing file to specified object
         var json = await File.ReadAllTextAsync(jsonFilePath);
         var expectedObject = JsonSerializer.Deserialize<T>(json);
 
+        // Mocking IHttpDeserializerService to return expected Data object
         mockService.RequestAndSerializeResponseAsync<T>(Arg.Any<string>(), Arg.Any<CancellationToken>())!
             .Returns(expectedObject);
 
