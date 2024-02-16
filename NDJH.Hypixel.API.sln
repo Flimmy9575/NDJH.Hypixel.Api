@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDJH.Hypixel.API.Tests", "N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDJH.Hypixel.API.IntegrationTests", "NDJH.Hypixel.API.IntegrationTests\NDJH.Hypixel.API.IntegrationTests.csproj", "{03E0A8C5-A25F-48E6-A546-6356B4254FB2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{35D5C240-04CE-4125-B456-3057D17FAE9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDJH.Hypixel.API.Tests.Shared", "NDJH.Hypixel.API.Tests.Shared\NDJH.Hypixel.API.Tests.Shared.csproj", "{042BDEAB-6FC4-4F14-A1B8-7F6054B02A4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,14 @@ Global
 		{03E0A8C5-A25F-48E6-A546-6356B4254FB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03E0A8C5-A25F-48E6-A546-6356B4254FB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03E0A8C5-A25F-48E6-A546-6356B4254FB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{042BDEAB-6FC4-4F14-A1B8-7F6054B02A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042BDEAB-6FC4-4F14-A1B8-7F6054B02A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042BDEAB-6FC4-4F14-A1B8-7F6054B02A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042BDEAB-6FC4-4F14-A1B8-7F6054B02A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{03E0A8C5-A25F-48E6-A546-6356B4254FB2} = {35D5C240-04CE-4125-B456-3057D17FAE9D}
+		{85F8349C-BC7A-4FE7-A8EB-7C71394B3B86} = {35D5C240-04CE-4125-B456-3057D17FAE9D}
+		{042BDEAB-6FC4-4F14-A1B8-7F6054B02A4C} = {35D5C240-04CE-4125-B456-3057D17FAE9D}
 	EndGlobalSection
 EndGlobal
