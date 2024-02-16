@@ -5,8 +5,8 @@ namespace NDJH.Hypixel.API.Models.SkyBlock;
 
 public record Stats(
     [property: JsonPropertyName("DEFENSE")]
-    int Defense,
-    [property: JsonPropertyName("HEALTH")] int Health);
+    double Defense,
+    [property: JsonPropertyName("HEALTH")] double Health);
 
 public record SkyBlockItem(
     [property: JsonPropertyName("material")]
@@ -18,7 +18,7 @@ public record SkyBlockItem(
     [property: JsonPropertyName("tier")] string Tier,
     [property: JsonPropertyName("stats")] Stats Stats,
     [property: JsonPropertyName("npc_sell_price")]
-    int NpcSellPrice,
+    double NpcSellPrice,
     [property: JsonPropertyName("id")] string Id);
 
 public record ItemsResponse(

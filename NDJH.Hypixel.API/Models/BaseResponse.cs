@@ -6,5 +6,5 @@ public record BaseResponse
 {
     [JsonPropertyName("success")] public bool Success { get; set; }
 
-    [JsonPropertyName("uuid")] public Guid Guid { get; set; }
+    [JsonPropertyName("uuid")] public string Uuid { get; set; }
 };

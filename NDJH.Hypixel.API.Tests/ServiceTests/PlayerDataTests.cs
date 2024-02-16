@@ -1,5 +1,7 @@
 ﻿using NDJH.Hypixel.API.Models.PlayerData;
 using NDJH.Hypixel.API.Services;
+using NDJH.Hypixel.API.Services.Abstractions;
+using NDJH.Hypixel.API.Tests.Shared;
 using NSubstitute;
 
 namespace NDJH.Hypixel.API.Tests.ServiceTests;
@@ -21,7 +23,7 @@ public class PlayerDataServiceTests
         await _playerData.GetPlayerAsync(TestConstants.Uuid.ToString());
 
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<Player>($"player?uuid={TestConstants.Uuid}");
+            .RequestAndSerializeResponseAsync<Player>($"player?uuid={TestConstants.Uuid}", CancellationToken.None);
     }
 
     [Fact]
@@ -30,7 +32,8 @@ public class PlayerDataServiceTests
         await _playerData.GetRecentGamesAsync(TestConstants.Uuid.ToString());
 
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<RecentGamesResponse>($"recentgames?uuid={TestConstants.Uuid}");
+            .RequestAndSerializeResponseAsync<RecentGamesResponse>($"recentgames?uuid={TestConstants.Uuid}",
+                CancellationToken.None);
     }
 
     [Fact]
@@ -39,7 +42,8 @@ public class PlayerDataServiceTests
         await _playerData.GetStatusAsync(TestConstants.Uuid.ToString());
 
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<StatusResponse>($"status?uuid={TestConstants.Uuid}");
+            .RequestAndSerializeResponseAsync<StatusResponse>($"status?uuid={TestConstants.Uuid}",
+                CancellationToken.None);
     }
 
     [Fact]
@@ -50,6 +54,7 @@ public class PlayerDataServiceTests
         await _playerData.GetGuildAsync(input, inputType);
 
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<GuildResponse>($"guild?{inputType}={input}");
+            .RequestAndSerializeResponseAsync<GuildResponse>($"guild?{inputType.ToString().ToLower()}={input}",
+                CancellationToken.None);
     }
 }

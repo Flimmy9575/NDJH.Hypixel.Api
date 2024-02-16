@@ -12,7 +12,7 @@ public record AuctionEntry(
     [property: JsonPropertyName("buyer")] string Buyer,
     [property: JsonPropertyName("timestamp")]
     long Timestamp,
-    [property: JsonPropertyName("price")] int Price,
+    [property: JsonPropertyName("price")] double Price,
     [property: JsonPropertyName("bin")] bool Bin,
     [property: JsonPropertyName("item_bytes")]
     string ItemBytes);

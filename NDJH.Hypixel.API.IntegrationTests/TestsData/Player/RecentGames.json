@@ -1,0 +1,27 @@
+﻿{
+  "success": true,
+  "uuid": "1003864418ea404193640b6469b4b612",
+  "games": [
+    {
+      "date": 1707981725836,
+      "gameType": "BEDWARS",
+      "mode": "BEDWARS_FOUR_FOUR",
+      "map": "Catalyst",
+      "ended": 1707982353535
+    },
+    {
+      "date": 1707981393965,
+      "gameType": "BEDWARS",
+      "mode": "BEDWARS_FOUR_FOUR",
+      "map": "Treenan",
+      "ended": 1707981687737
+    },
+    {
+      "date": 1707980876890,
+      "gameType": "BEDWARS",
+      "mode": "BEDWARS_FOUR_FOUR",
+      "map": "Pharaoh",
+      "ended": 1707981334110
+    }
+  ]
+}

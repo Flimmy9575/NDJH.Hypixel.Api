@@ -1,5 +1,7 @@
 ﻿using NDJH.Hypixel.API.Models.SkyBlock;
 using NDJH.Hypixel.API.Services;
+using NDJH.Hypixel.API.Services.Abstractions;
+using NDJH.Hypixel.API.Tests.Shared;
 using NSubstitute;
 
 namespace NDJH.Hypixel.API.Tests.ServiceTests;
@@ -20,7 +22,8 @@ public class SkyBlockServiceTests
     {
         await _skyBlockService.GetCollectionsAsync();
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<CollectionResponse>("/recources/skyblock/collections");
+            .RequestAndSerializeResponseAsync<CollectionResponse>("resources/skyblock/collections",
+                CancellationToken.None);
     }
 
     [Fact]
@@ -28,7 +31,7 @@ public class SkyBlockServiceTests
     {
         await _skyBlockService.GetSkillsAsync();
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<SkillsResponse>("/resources/skyblock/skills");
+            .RequestAndSerializeResponseAsync<SkillsResponse>("resources/skyblock/skills", CancellationToken.None);
     }
 
     [Fact]
@@ -36,7 +39,7 @@ public class SkyBlockServiceTests
     {
         await _skyBlockService.GetItemsAsync();
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<ItemsResponse>("/resources/skyblock/items");
+            .RequestAndSerializeResponseAsync<ItemsResponse>("resources/skyblock/items", CancellationToken.None);
     }
 
     [Fact]
@@ -44,7 +47,8 @@ public class SkyBlockServiceTests
     {
         await _skyBlockService.GetElectionsAsync();
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<ElectionsResponse>("/resources/skyblock/election");
+            .RequestAndSerializeResponseAsync<
+                ElectionsResponse>("resources/skyblock/election", CancellationToken.None);
     }
 
     [Fact]
@@ -52,7 +56,7 @@ public class SkyBlockServiceTests
     {
         await _skyBlockService.GetBingoAsync();
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<BingoResponse>("/resources/skyblock/bingo");
+            .RequestAndSerializeResponseAsync<BingoResponse>("resources/skyblock/bingo", CancellationToken.None);
     }
 
     [Fact]
@@ -60,7 +64,7 @@ public class SkyBlockServiceTests
     {
         await _skyBlockService.GetNewsAsync();
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<NewsResponse>("/resources/skyblock/news");
+            .RequestAndSerializeResponseAsync<NewsResponse>("skyblock/news", CancellationToken.None);
     }
 
     [Fact]
@@ -70,7 +74,8 @@ public class SkyBlockServiceTests
         await _skyBlockService.GetAuctionAsync(TestConstants.Uuid.ToString(), inputType);
         await _httpRequestAndDeserializer.Received()
             .RequestAndSerializeResponseAsync<AuctionResponse>(
-                $"/skyblock/auction?{inputType.ToString()}={TestConstants.Uuid.ToString()}");
+                $"skyblock/auction?{inputType.ToString().ToLower()}={TestConstants.Uuid.ToString()}",
+                CancellationToken.None);
     }
 
     [Fact]
@@ -79,7 +84,8 @@ public class SkyBlockServiceTests
         const int page = 1;
         await _skyBlockService.GetActiveAuctionsAsync(page);
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<AuctionsResponse>($"/skyblock/auctions?page={page}");
+            .RequestAndSerializeResponseAsync<AuctionsResponse>($"skyblock/auctions?page={page}",
+                CancellationToken.None);
     }
 
     [Fact]
@@ -87,7 +93,8 @@ public class SkyBlockServiceTests
     {
         await _skyBlockService.GetAuctionsHistoryAsync();
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<AuctionsHistoryResponse>("/skyblock/auctions_ended");
+            .RequestAndSerializeResponseAsync<AuctionsHistoryResponse>("skyblock/auctions_ended",
+                CancellationToken.None);
     }
 
     [Fact]
@@ -95,7 +102,7 @@ public class SkyBlockServiceTests
     {
         await _skyBlockService.GetBazaarAsync();
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<BazaarResponse>("skyblock/bazaar");
+            .RequestAndSerializeResponseAsync<BazaarResponse>("skyblock/bazaar", CancellationToken.None);
     }
 
     [Fact]
@@ -104,7 +111,8 @@ public class SkyBlockServiceTests
         var profileId = "test-profile-id";
         await _skyBlockService.GetProfileAsync(profileId);
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<ProfileResponse>("/skyblock/profile");
+            .RequestAndSerializeResponseAsync<ProfileResponse>($"skyblock/profile?profile={profileId}",
+                CancellationToken.None);
     }
 
     [Fact]
@@ -112,7 +120,8 @@ public class SkyBlockServiceTests
     {
         await _skyBlockService.GetProfilesAsync(TestConstants.Uuid.ToString());
         await _httpRequestAndDeserializer.Received()
-            .RequestAndSerializeResponseAsync<ProfilesResponse>("/skyblock/profiles");
+            .RequestAndSerializeResponseAsync<ProfilesResponse>(
+                $"skyblock/profiles?uuid={TestConstants.Uuid.ToString()}", CancellationToken.None);
     }
 
     [Fact]
@@ -121,6 +130,6 @@ public class SkyBlockServiceTests
         await _skyBlockService.GetBingoCompletionsAsync(TestConstants.Uuid.ToString());
         await _httpRequestAndDeserializer.Received()
             .RequestAndSerializeResponseAsync<BingoCompletionsResponse>(
-                $"/skyblock/bingo?uuid={TestConstants.Uuid.ToString()}");
+                $"skyblock/bingo?uuid={TestConstants.Uuid.ToString()}", CancellationToken.None);
     }
 }

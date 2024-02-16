@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NDJH.Hypixel.API.Configuration;
 using NDJH.Hypixel.API.Exceptions;
 using NDJH.Hypixel.API.Services;
+using NDJH.Hypixel.API.Services.Abstractions;
 
 namespace NDJH.Hypixel.API.DependencyInjection;
 
@@ -39,6 +40,10 @@ public static class ServiceExtensions
             services.AddSingleton<ISkyBlock, SkyBlock>();
             services.AddSingleton<IResource, Resource>();
             services.AddSingleton<IOther, Other>();
+
+
+            // Other
+            services.AddSingleton<IRateLimitService, RateLimitService>();
         }
         else
         {
