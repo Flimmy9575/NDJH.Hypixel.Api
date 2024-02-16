@@ -50,8 +50,17 @@ Below are the current supported endpoints.
 ## Installation
 
 ### From Nuget
+Simply run the following commands
+```shell
+dotnet package add NDJH.Hypixel.API
+```
+If you want DI support run:
+```shell
+dotnet package add NDJH.Hypixel.API.DependencyInjection
+```
 
 ### From Source
+
 
 ## Configuration
 
