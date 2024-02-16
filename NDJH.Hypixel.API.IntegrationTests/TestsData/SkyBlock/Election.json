@@ -1,0 +1,182 @@
+﻿{
+  "success": true,
+  "lastUpdated": 1708045274408,
+  "mayor": {
+    "key": "fishing",
+    "name": "Marina",
+    "perks": [
+      {
+        "name": "Luck of the Sea 2.0",
+        "description": "Gain §315α Sea Creature Chance§7."
+      },
+      {
+        "name": "Fishing Festival",
+        "description": "Start a special fishing event the first §b3 §7days of each month!"
+      }
+    ],
+    "election": {
+      "year": 330,
+      "candidates": [
+        {
+          "key": "fishing",
+          "name": "Marina",
+          "perks": [
+            {
+              "name": "Luck of the Sea 2.0",
+              "description": "Gain §315α Sea Creature Chance§7."
+            },
+            {
+              "name": "Fishing Festival",
+              "description": "Start a special fishing event the first §b3 §7days of each month!"
+            }
+          ],
+          "votes": 498342
+        },
+        {
+          "key": "farming",
+          "name": "Finnegan",
+          "perks": [
+            {
+              "name": "Farming Simulator",
+              "description": "There is a §a25% §7chance for Mathematical Hoes and the §9Cultivating Enchantment §7to count twice."
+            },
+            {
+              "name": "GOATed",
+              "description": "§eJacob's Farming Contest §7brackets include up to §a10% §7more players each."
+            },
+            {
+              "name": "Pelt-pocalypse",
+              "description": "Obtain §a1.5x §7more §5pelts §7from §aTrevor §7in the §eMushroom Desert§7, hunt a new trapper mob, and purchase items from a new trapper shop."
+            }
+          ],
+          "votes": 225234
+        },
+        {
+          "key": "economist",
+          "name": "Diaz",
+          "perks": [
+            {
+              "name": "Barrier Street",
+              "description": "Gain §625% §7more bank interest."
+            },
+            {
+              "name": "Shopping Spree",
+              "description": "Increase daily NPC buy limits by §e10x§7."
+            }
+          ],
+          "votes": 29391
+        },
+        {
+          "key": "mining",
+          "name": "Cole",
+          "perks": [
+            {
+              "name": "Prospection",
+              "description": "Mining minions work §a25% §7faster."
+            },
+            {
+              "name": "Mining XP Buff",
+              "description": "Get §3+60☯ Mining Wisdom §7on public islands."
+            }
+          ],
+          "votes": 48809
+        },
+        {
+          "key": "dungeons",
+          "name": "Paul",
+          "perks": [
+            {
+              "name": "EZPZ",
+              "description": "Gain §e10 §7bonus score on dungeon runs."
+            }
+          ],
+          "votes": 93695
+        }
+      ]
+    }
+  },
+  "current": {
+    "year": 331,
+    "candidates": [
+      {
+        "key": "dungeons",
+        "name": "Paul",
+        "perks": [
+          {
+            "name": "EZPZ",
+            "description": "Gain §e10 §7bonus score on dungeon runs."
+          }
+        ],
+        "votes": 23039
+      },
+      {
+        "key": "farming",
+        "name": "Finnegan",
+        "perks": [
+          {
+            "name": "Farming Simulator",
+            "description": "There is a §a25% §7chance for Mathematical Hoes and the §9Cultivating Enchantment §7to count twice."
+          },
+          {
+            "name": "GOATed",
+            "description": "§eJacob's Farming Contest §7brackets include up to §a10% §7more players each."
+          },
+          {
+            "name": "Pelt-pocalypse",
+            "description": "Obtain §a1.5x §7more §5pelts §7from §aTrevor §7in the §eMushroom Desert§7, hunt a new trapper mob, and purchase items from a new trapper shop."
+          }
+        ],
+        "votes": 35501
+      },
+      {
+        "key": "pets",
+        "name": "Diana",
+        "perks": [
+          {
+            "name": "Lucky!",
+            "description": "Gain §d+25♣ Pet Luck§7."
+          },
+          {
+            "name": "Mythological Ritual",
+            "description": "Mayor Diana will sell the Griffin pet, which lets you find §2Mythological Creatures §7and tons of §eunique items§7."
+          }
+        ],
+        "votes": 360506
+      },
+      {
+        "key": "economist",
+        "name": "Diaz",
+        "perks": [
+          {
+            "name": "Barrier Street",
+            "description": "Gain §625% §7more bank interest."
+          },
+          {
+            "name": "Shopping Spree",
+            "description": "Increase daily NPC buy limits by §e10x§7."
+          }
+        ],
+        "votes": 10123
+      },
+      {
+        "key": "mining",
+        "name": "Cole",
+        "perks": [
+          {
+            "name": "Prospection",
+            "description": "Mining minions work §a25% §7faster."
+          },
+          {
+            "name": "Mining XP Buff",
+            "description": "Get §3+60☯ Mining Wisdom §7on public islands."
+          },
+          {
+            "name": "Mining Fiesta",
+            "description": "§7Schedules two Mining Fiesta events during the year!"
+          }
+        ],
+        "votes": 435165
+      }
+    ]
+  }
+}

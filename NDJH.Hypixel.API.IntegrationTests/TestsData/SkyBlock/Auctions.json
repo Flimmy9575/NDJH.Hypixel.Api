@@ -1,0 +1,34 @@
+﻿{
+  "success": true,
+  "page": 0,
+  "totalPages": 61,
+  "totalAuctions": 60816,
+  "lastUpdated": 1708046704698,
+  "auctions": [
+    {
+      "uuid": "e40f4d5766a54bf1a1e0ebff5b786c04",
+      "auctioneer": "25223c840c754536b15c2b9f4fc5b293",
+      "profile_id": "65d60668787d415bb58dac95d28e5768",
+      "coop": [
+        "25223c840c754536b15c2b9f4fc5b293",
+        "10b1d1f0d16341bdbfddae87812c87e6"
+      ],
+      "start": 1708046704602,
+      "end": 1708068304602,
+      "item_name": "Pickonimbus 2000",
+      "item_lore": "§8Breaking Power 7\n\n§7Damage: §c+30\n§7Mining Speed: §a+1,500\n\n§7A powerful tool that breaks after\n§7§a5000§7 uses.\n\n§6Ability: Mining Speed Boost  §e§lRIGHT CLICK\n§7Grants §a+§a300% §6⸕ Mining Speed §7for\n§7§a20s§7.\n§8Cooldown: §a120s\n\n§7§8This item can be reforged!\n§5§lEPIC PICKAXE",
+      "extra": "Pickonimbus 2000 Diamond Pickaxe",
+      "category": "misc",
+      "tier": "EPIC",
+      "starting_bid": 400000,
+      "item_bytes": "H4sIAAAAAAAAAFVSPW/bMBA9OW5rKyiCpkWHTAyQTqkD2o4tOZutuomRjxpNAnSlpLNMRBINkUKSOXPG/gaNXTvrN/QXdOm/CHp0lpYAicO9e+/e4egCtMGRLgA4DWjI2HnvwItAlblxXNgwImlDE/NoCfY4sHmdhwWKGxGm6GxA+0TG+DkViSb0yYVXsdSrVNwT6UwV2KLsFrytK39iSTJP2FzdYsE8At7UlfdJZCLBI1ZX0X6fww6lzmVu6y5XiLEFxH7344BzIuwROmYrK7AoU2aUomcpDFs70kwsDBa2m0csonCKWKlRHxC5W1fDcShTae6P2L892EQpbRh1wrpKv86OT65YcDYLTsHyjwuRG722QbfP+QeKh79/fv9fgyoXqoDXz717XFNwAO9o8IBcxuo2X4/SJYS8sHWZf7WUmkmDGYtEzkJkBZJIgvEubNfVgNxM57OA0T0df5u2oHkhMrTzDeYyulG5zMJSsx4NCi5sTe9MIcbGFDIsDeqWXSZsWvKXi9n55PqSBMqScns4CkXPjwedER/xzmHYO+z4I9HvoB8uhugNvYjHTWgbmaE2IlvR3h9/PPz5BdCAl88bs5/hL5TC18g7AgAA",
+      "claimed": false,
+      "claimed_bidders": [],
+      "highest_bid_amount": 0,
+      "last_updated": 1708046704602,
+      "bin": true,
+      "bids": [],
+      "item_uuid": "e9ba28d590904b2489a3e8bf6e767c0d"
+    }
+  ]
+}

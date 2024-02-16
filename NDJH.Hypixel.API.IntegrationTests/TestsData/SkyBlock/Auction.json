@@ -1,0 +1,371 @@
+﻿{
+  "success": true,
+  "auctions": [
+    {
+      "_id": "621135c40cf23545893185d8",
+      "uuid": "0fc474422e6a43bbaa19fd7b515c9f95",
+      "auctioneer": "5417cf1bc66848f7a4435ccc1d400451",
+      "profile_id": "7cbb94045c2b4fe3a8dc448a09688de2",
+      "coop": [
+        "92324e0c36114f3fa1e89ab8909aad23",
+        "5417cf1bc66848f7a4435ccc1d400451"
+      ],
+      "start": 1645295044927,
+      "end": 1645467844927,
+      "item_name": "Sweet Axe",
+      "item_lore": "§7Damage: §c+25\n\n§7§a20% §7chance of dropping an\n§7Apple when chopping logs.\n\n§7§8This item can be reforged!\n§a§lUNCOMMON AXE",
+      "extra": "Sweet Axe Iron Axe",
+      "category": "weapon",
+      "tier": "UNCOMMON",
+      "starting_bid": 25,
+      "item_bytes": {
+        "type": 0,
+        "data": "H4sIAAAAAAAAAE2QS0/CUBCFp4BCqwnRrS6uRlcGoaVIYVexxigPwyO4I9N2KDf2lfYS8BfxP/hhxht04XK+k3NO5mgAKihcAwClAAXuKwUFjnrJOhaKBkWBgQIns9jNCD/RDUkpgvrCfXoOMcil6VuDss/zNMQvFUr9JKOKpGU42+/aTxhhQF2233l3Rkviawn3OzQat5K1vRXGHrFkyfwsSVMeBwxjuJSKnaYhsc2KYuat/qQwCfJ7mcEOGdZ0xXPGBUXMw5i5xDJaJllA/hWcy4r9LpwNe6PBYDRk9odTgdIQI4JTKU02RILZWwINqs5WZGgLkXF3LSivgJpkPODxFAO4GDtze/y06M8Gj8741e69dSdzx5kuDoFyKlD/3aX1WpIbvYHLVtu1apbeadZMr9mouWazXbMQO6ZLpmdavmwRPKJcYJRC1ajrnbphML2rP7D3AUABjn+Xk9/CD5KVEs6gAQAA"
+      },
+      "claimed": false,
+      "claimed_bidders": [],
+      "highest_bid_amount": 0,
+      "bids": []
+    },
+    {
+      "_id": "640d60210cf21e36d58d9d54",
+      "uuid": "83d0720e1419450aad8ba6991241383c",
+      "auctioneer": "5417cf1bc66848f7a4435ccc1d400451",
+      "profile_id": "cc217e92d2444211b84fba5a8eeb2362",
+      "coop": [
+        "8771967de8e742beb246870876cc7151",
+        "1c22279ce0bd455995fac4d743755648",
+        "5417cf1bc66848f7a4435ccc1d400451"
+      ],
+      "start": 1678598177704,
+      "end": 1678598207949,
+      "item_name": "Personal Compactor 4000",
+      "item_lore": "§7Automatically turns certain\n§7materials in your inventory into\n§7their enchanted form.\n\n§eRight-click to configure!\n\n§8Does not grant Carpentry XP!\n\n§a§lUNCOMMON ACCESSORY",
+      "extra": "Personal Compactor 4000 Dropper",
+      "category": "accessories",
+      "tier": "UNCOMMON",
+      "starting_bid": 519000,
+      "item_bytes": {
+        "type": 0,
+        "data": "H4sIAAAAAAAAAB2RwW7aQBCGB0gb8CXHVlWUbNReXaCGBHKzHKIcAragldoTmtiDWcXeRetxFF4mV96DB6syzl52V98/36xmPYAetLQHAK02tHUGby34FNnacMuDDmPegxMy6Raa1YHeg87ovsC8kut/D04zXe0K3Evq0TrqQuO7OB5uwpptiaxTLIq94tqZSqXkGLWB78KFkdNYVEobtbe1k/2FDFu3lxNb+Coh3pJ2qmmPhilTG+vKn9Li/Higpc637KeFTp8VW5Vas9F57ehK+OXxMLmzVCljWeVOilWEbid6sf9Nmojo8Xgo/iyieD6PFyqMotlqFS//deFkgSXBNwkk5CprsFCRLXeYyuPUaDAYgAdns1d2GDI7/VQzVd2P2X1JZstVvAgf12JNwuh3vFw3BeKsa+E/nmiUTsZB4NM0m/gjGgc+Ton8IMgm12MUspEZ9liXVDGWOzgL+sNh/1egbm6HQ5XMAdrw+Q5LzKn5kHd4VdxTvwEAAA=="
+      },
+      "claimed": true,
+      "claimed_bidders": [],
+      "bin": true,
+      "highest_bid_amount": 519000,
+      "bids": [
+        {
+          "auction_id": "83d0720e1419450aad8ba6991241383c",
+          "bidder": "c5e65724f1db4e39887e976eb98b9f04",
+          "profile_id": "c5e65724f1db4e39887e976eb98b9f04",
+          "amount": 519000,
+          "timestamp": 1678598211866
+        }
+      ]
+    },
+    {
+      "_id": "6585062e0cf2c6b56d98f28c",
+      "uuid": "975313445f814b91831c947d53ff2bf0",
+      "auctioneer": "5417cf1bc66848f7a4435ccc1d400451",
+      "profile_id": "cc217e92d2444211b84fba5a8eeb2362",
+      "coop": [
+        "8771967de8e742beb246870876cc7151",
+        "1c22279ce0bd455995fac4d743755648",
+        "5417cf1bc66848f7a4435ccc1d400451"
+      ],
+      "start": 1703216686376,
+      "end": 1703216764047,
+      "item_name": "Personal Compactor 4000",
+      "item_lore": "§7Automatically turns certain materials\n§7in your inventory into their\n§7enchanted form.\n\n§eRight-click to configure!\n\n§8Does not grant Carpentry XP!\n\n§a§lUNCOMMON ACCESSORY",
+      "extra": "Personal Compactor 4000 Dropper",
+      "category": "accessories",
+      "tier": "UNCOMMON",
+      "starting_bid": 798000,
+      "item_bytes": {
+        "type": 0,
+        "data": "H4sIAAAAAAAAAB2RwU7bQBBAJyFA4guiF6oKia3UQy8utnGbwM0yQT0ksZUUqT2h6XrjrLB3o/W4Ij/DNf+RD6sYs6fdmTdvRrMewAh62gOAXh/6uoDXHhyntjXU8+CIsBzBQBm5ge4cweinLtRDhWXDz/8enBa62Va4Y2pmnRpC5/t62I+TlmyNpCVW1U5Q60wjpHKE2giOK6exauCKSQ7sbOuENv+UIet2fCMraKO0gw8MdO3RkCrE2rr6G7e4POzVUpcb8mWl5bNgXFqz1mXr1GfOs3Zyb1UjjCVROi4WKbot69n+O++Qj4c9HvbV4yLN5vNsIZI0na5W2fLPEAYLrBV8YiBXrrEGK5HaeouShxNxEATgwdn0hRwmRE7/bUk1w/fdXeTT5SpbJLMntuZJ+itbPnUF7Gxbzn+JZDiREsd+sL4t/DgcT3z8MQn9KC4wCOPb7+OYdzgiXauGsN7CeRhdR+F1dCPC4C6ORD4H6MPJPdZYqu5L3gDUtkyawQEAAA=="
+      },
+      "claimed": true,
+      "claimed_bidders": [],
+      "bin": true,
+      "highest_bid_amount": 798000,
+      "bids": [
+        {
+          "auction_id": "975313445f814b91831c947d53ff2bf0",
+          "bidder": "52556ad681834aa9a3b2ac686b65b2a5",
+          "profile_id": "6479ee1431334ea69ceb6d8df05409fa",
+          "amount": 798000,
+          "timestamp": 1703216768012
+        }
+      ]
+    },
+    {
+      "_id": "6598cb1e0cf2c6b56dc9cb2c",
+      "uuid": "485d0f47b63c4209a69003bd455c8aa8",
+      "auctioneer": "5417cf1bc66848f7a4435ccc1d400451",
+      "profile_id": "cc217e92d2444211b84fba5a8eeb2362",
+      "coop": [
+        "8771967de8e742beb246870876cc7151",
+        "1c22279ce0bd455995fac4d743755648",
+        "5417cf1bc66848f7a4435ccc1d400451"
+      ],
+      "start": 1704512286276,
+      "end": 1704512544443,
+      "item_name": "Personal Compactor 5000",
+      "item_lore": "§7Automatically turns certain materials\n§7in your inventory into their\n§7enchanted form.\n\n§eRight-click to configure!\n\n§8Does not grant Carpentry XP!\n\n§9§lRARE ACCESSORY",
+      "extra": "Personal Compactor 5000 Dropper",
+      "category": "accessories",
+      "tier": "RARE",
+      "starting_bid": 1049000,
+      "item_bytes": {
+        "type": 0,
+        "data": "H4sIAAAAAAAAAB2RsW7bMBCGz06a2hpSIAgQoChQFujQRYlqy7GcTVBcdEhiQe7QTsGVushEJNKgTkH9Ml39Hn6woqdwIu//7juCDADGMDABAAyGMDQl/B3Am8x1lgcBHDFWYzgmqzfQryMYfzclfauxauX4L4C3pWm3Ne6EunOeRtD7vhz287Rj1yAbjXW9U9x52ypNntFYJXXyBusWPgophZ3rvDL2hSw7v5MdO8UbMh7OBOjHo2Uq1ZPzzaWM+HDYU2GqDYe6NvpZCa6dfTJV5+mT5KJNbh21yjpWlZdmlaHfil7sP/MeOT/sF4d9XaTFUqVZtlyvV8WvERw/YEPwXsKcfOss1ipzzRa1XEzNoiiCAN4t/7DHlNmb3x1TO3p9t4t8WaxXD+ndY7a6z9Psx6p47BvE2XWSf74uiRZReR0mkymG8TyOw4RiCuNomkw04Tye6hGM2TTUMjZbOP16NbuaxGpxM0tUfg8whJNbbLCi/i/+A2GFTva6AQAA"
+      },
+      "claimed": true,
+      "claimed_bidders": [],
+      "bin": true,
+      "highest_bid_amount": 1049000,
+      "bids": [
+        {
+          "auction_id": "485d0f47b63c4209a69003bd455c8aa8",
+          "bidder": "5776da5bb4ff4c15a4d1a8725c5cdafe",
+          "profile_id": "dc668a809ea74199920cf4fdbe0f895e",
+          "amount": 1049000,
+          "timestamp": 1704512548367
+        }
+      ]
+    },
+    {
+      "_id": "65ac4ea70cf27580eac4bd59",
+      "uuid": "40f29d13c66c4014a566f77b6c8262b7",
+      "auctioneer": "5417cf1bc66848f7a4435ccc1d400451",
+      "profile_id": "cc217e92d2444211b84fba5a8eeb2362",
+      "coop": [
+        "8771967de8e742beb246870876cc7151",
+        "1c22279ce0bd455995fac4d743755648",
+        "5417cf1bc66848f7a4435ccc1d400451"
+      ],
+      "start": 1705791143638,
+      "end": 1705792585368,
+      "item_name": "Personal Compactor 4000",
+      "item_lore": "§7Automatically turns certain materials\n§7in your inventory into their\n§7enchanted form.\n\n§eRight-click to configure!\n\n§8Does not grant Carpentry XP!\n\n§a§lUNCOMMON ACCESSORY",
+      "extra": "Personal Compactor 4000 Dropper",
+      "category": "accessories",
+      "tier": "UNCOMMON",
+      "starting_bid": 594000,
+      "item_bytes": {
+        "type": 0,
+        "data": "H4sIAAAAAAAAAB2RwU7bQBBAJyG0iXuo1EsRqsQicaAHV1aThuRomSAOEEcJlcoJDeuxs6q9G63HVfMR/AIc8x/5MMSYPe3OvHkz2gkABtAxAQB0utA1GTx34DBxjeVOAAeMxQB6ZPUa2nMAg2uT0VWJRS3P1wA+ZqbelLgV6sZ56kPrO9/vLuKGXYVsNJblVnHjba00eUZjlcTJGyxrOBFSAlvXeGXsP7Ls/FZu7BSvyXj4IkDbHi1TpnLnqx/S4tt+R0tTrDnUpdF/leDa2dwUjadTyYt2cumoVtaxKrwUqwT9RvRi/7NokaP9Dve78vc8SW9v07mKk2S2WqXL+z705lgRHAuwIF87i6VKXLVBLcOpURRFEMDn2X/2GDN789gw1f33v/u6mC1X6Ty+eRDrIk7u0uVDWyDOppH8WTTMdB7pcZg/TqNwNMJhOKFfkxCH4yHReJr/jKY9GLCpqGasNrKVp++fXg4BuvDhEissqN3DGx/RpkK2AQAA"
+      },
+      "claimed": true,
+      "claimed_bidders": [],
+      "bin": true,
+      "highest_bid_amount": 594000,
+      "bids": [
+        {
+          "auction_id": "40f29d13c66c4014a566f77b6c8262b7",
+          "bidder": "a2166bdfdac7410cbd04ca60a67ea7cc",
+          "profile_id": "97419598a05f49cabe68fa4f95028a22",
+          "amount": 594000,
+          "timestamp": 1705792589283
+        }
+      ]
+    },
+    {
+      "_id": "65ceb3360cf2dae9083b7fde",
+      "uuid": "3c6912afbb574fe993bc419665980176",
+      "auctioneer": "5417cf1bc66848f7a4435ccc1d400451",
+      "profile_id": "cc217e92d2444211b84fba5a8eeb2362",
+      "coop": [
+        "8771967de8e742beb246870876cc7151",
+        "1c22279ce0bd455995fac4d743755648",
+        "5417cf1bc66848f7a4435ccc1d400451"
+      ],
+      "start": 1708045110677,
+      "end": 1708066710677,
+      "item_name": "Personal Compactor 4000",
+      "item_lore": "§7Automatically turns certain materials\n§7in your inventory into their\n§7enchanted form.\n\n§eRight-click to configure!\n\n§8Does not grant Carpentry XP!\n\n§a§lUNCOMMON ACCESSORY",
+      "extra": "Personal Compactor 4000 Dropper",
+      "category": "accessories",
+      "tier": "UNCOMMON",
+      "starting_bid": 749000,
+      "item_bytes": {
+        "type": 0,
+        "data": "H4sIAAAAAAAAAB2RwU7bQBBAJyGUxBckLq1QJbZSD724siBpyNEyQRwgjhIqtadosh47K+zdaD2uyEfwC1xz5B/yYYhx97Q78+bNaCcAGEDHBADQ6ULXZPDagePENZY7ARwxFgPokdUbaM8RDO5MRrclFrU83wM4yUy9LXEn1L3z1IfW9+OwH8cNuwrZaCzLneLG21pp8ozGKomTN1jWcCGkBHau8crYf2TZ+Z3c2CnekPFwJkDbHi1TpnLnq5/S4uthTwtTbDjUpdFPSnDtbG6KxtM3yYv2+sZRraxjVXgpVgn6rejF/mfeIl8Oezzsy9+zJH14SGcqTpLpcpku/vahN8OK4FyAOfnaWSxV4qotahlODaMoggBOp8/sMWb2Zt0w1f3/f/d5Pl0s01l8vxLrPE4e08WqLRBn00j+ux6Oo2itf4WT9eU4HI4uJ+GEKA+vrqN8lOWjURQNezBgU1HNWG1lKy9vj08rgC58usEKC2r38AHuPnoLtgEAAA=="
+      },
+      "claimed": false,
+      "claimed_bidders": [],
+      "bin": true,
+      "highest_bid_amount": 0,
+      "bids": []
+    },
+    {
+      "_id": "65ceb33e0cf2dae9083b7ff9",
+      "uuid": "6ffdc74bdce84257bf7b438128629f84",
+      "auctioneer": "5417cf1bc66848f7a4435ccc1d400451",
+      "profile_id": "cc217e92d2444211b84fba5a8eeb2362",
+      "coop": [
+        "8771967de8e742beb246870876cc7151",
+        "1c22279ce0bd455995fac4d743755648",
+        "5417cf1bc66848f7a4435ccc1d400451"
+      ],
+      "start": 1708045118240,
+      "end": 1708066718240,
+      "item_name": "Personal Compactor 4000",
+      "item_lore": "§7Automatically turns certain materials\n§7in your inventory into their\n§7enchanted form.\n\n§eRight-click to configure!\n\n§8Does not grant Carpentry XP!\n\n§a§lUNCOMMON ACCESSORY",
+      "extra": "Personal Compactor 4000 Dropper",
+      "category": "accessories",
+      "tier": "UNCOMMON",
+      "starting_bid": 749000,
+      "item_bytes": {
+        "type": 0,
+        "data": "H4sIAAAAAAAAAB2RwU7bQBBAJyHQxBckLiBUqVupBy5GDglJOFomiAPEUQISnKKJPXEW7N1oPa6aj+gv9Jpj/yHiu1DH3dPuzJs3ox0PoAMN7QFAowlNncKfBhxGtjLc8OCAMetAi0yyhvocQOdep3SXY1bK89ODL6kuNzluhXqwjtpQ+y72u2FYsS2QdYJ5vlVcOVOqhByjNkri5DTmJXwTUgJbWzmlzU8ybN1WbmwVr0k7OBGgbo+GKVUr64pLafF1v6OZztbsJ7lO3pXgiTUrnVWOvktetKNbS6UyllXmpFhF6DaiF/vLtEbO9jvc7/LnSRQ/PsYTFUbReD6PZ69taE2wIDgXYEqutAZzFdlig4kMp/pBEIAHx+Nf7DBkdnpZMZXt/393Oh3P5vEkfFiIdRpGT/FsUReIs6ok/2NwEwS9EV37afc69fujq66/HNLK7w9osKJRgulNrwUd1gWVjMVGtvL779PbB0ATjm6xwIzqPfwDN77+JrYBAAA="
+      },
+      "claimed": false,
+      "claimed_bidders": [],
+      "bin": true,
+      "highest_bid_amount": 0,
+      "bids": []
+    },
+    {
+      "_id": "65ceb6230cf2dae9083b8aab",
+      "uuid": "9346613274a443009cad810ae5cfff41",
+      "auctioneer": "5417cf1bc66848f7a4435ccc1d400451",
+      "profile_id": "cc217e92d2444211b84fba5a8eeb2362",
+      "coop": [
+        "8771967de8e742beb246870876cc7151",
+        "1c22279ce0bd455995fac4d743755648",
+        "5417cf1bc66848f7a4435ccc1d400451"
+      ],
+      "start": 1708045859850,
+      "end": 1708132259850,
+      "item_name": "Personal Compactor 6000",
+      "item_lore": "§7Automatically turns certain materials\n§7in your inventory into their\n§7enchanted form.\n\n§eRight-click to configure!\n\n§8Does not grant Carpentry XP!\n\n§5§lEPIC ACCESSORY",
+      "extra": "Personal Compactor 6000 Dropper",
+      "category": "accessories",
+      "tier": "EPIC",
+      "starting_bid": 2589000,
+      "item_bytes": {
+        "type": 0,
+        "data": "H4sIAAAAAAAAAB2Rz2rbQBDGx46T2LoUSiBQAtlAD72oKH/sykehuDSQxsLOoT2FkTSWl6x2zWoU4ofIK/TqY9/BD1Yy6p5m5/vmN8NMADCCng4AoNeHvi7hTw8OU9da7gVwwFiNYEC2WEP3DmD0Q5f03WDVyPdfAMelbjYGt+K6d56G0PG+7HffkpZdjawLNGaruPW2UQV5Rm2V5MlrNA2ci1MSW9d6pe0LWXZ+KxE7xWvSHj6KoWuPlqlUK+frr9LibL+jha7WHBZGF89K7IWzK121ni5EF2x866hR1rGqvBSrFP1G8EL/lXWWk/1uvN+ZWXaXqiRNZ8vlfPF7CIMHrAk+iZiRb5xFo1JXb7CQwdQkiiII4MPslT0mzF7nLVMz/L+302y2WM4fkvundP4zS9LH+eKpKxBm24r+Ob+Mx5OryyicTjEPb8p4HE7j6yhcRROaxvFVvsJ8ACPWNTWM9UYu8vb3sTIAfTi6xRor6m7wDgtnkwCyAQAA"
+      },
+      "claimed": false,
+      "claimed_bidders": [],
+      "bin": true,
+      "highest_bid_amount": 0,
+      "bids": []
+    },
+    {
+      "_id": "65ceb71f0cf2dae9083b8d32",
+      "uuid": "bf3e62baab99480c837afb7a4b979e18",
+      "auctioneer": "5417cf1bc66848f7a4435ccc1d400451",
+      "profile_id": "cc217e92d2444211b84fba5a8eeb2362",
+      "coop": [
+        "8771967de8e742beb246870876cc7151",
+        "1c22279ce0bd455995fac4d743755648",
+        "5417cf1bc66848f7a4435ccc1d400451"
+      ],
+      "start": 1708046111014,
+      "end": 1708132511014,
+      "item_name": "Personal Compactor 5000",
+      "item_lore": "§7Automatically turns certain materials\n§7in your inventory into their\n§7enchanted form.\n\n§eRight-click to configure!\n\n§8Does not grant Carpentry XP!\n\n§9§lRARE ACCESSORY",
+      "extra": "Personal Compactor 5000 Dropper",
+      "category": "accessories",
+      "tier": "RARE",
+      "starting_bid": 1399000,
+      "item_bytes": {
+        "type": 0,
+        "data": "H4sIAAAAAAAAAB2RwW7aQBCGB0IS8CVSVClSFalbKYdcXBESMDlaDlUPSUCGQ3pC42Uwq9q7aD2uwkP0FXLl2HfgefoMUcbd0+z8/3wzmgkAetAyAQC02tA2K3hrwXHiasutAI4Y8x50yOoNNO8Iej/Mir4XmFfyfQ/gdGWqbYE7cT06T11oeNeHfRTX7Epko7EodoprbyulyTMaqyRP3mBRwRdxSmLnaq+M/U2Wnd9JxE7xhoyHczE07dEyrdTa+fKbtLg87Ck1+YZDXRj9S4ldO7s2ee3pq+iCHT84qpR1rHIvxSpBvxW80F9mjeXTYX9/2BdpnE5UnCST+Xya/uxC5xlLgs8izshXzmKhElduUctgatjv9yGAs8kre4yZvclqpqr7f28Xs0k6nz7Hj8tk+jSLk8U0XTYFwqxr0a/GNLrNsigLcUCj8C7K7sNxFg3Cm2w8HA6z/kBHugM9NiVVjOVWLvLn76L8B9CGkwcsMafmBh8dg25qsgEAAA=="
+      },
+      "claimed": false,
+      "claimed_bidders": [],
+      "bin": true,
+      "highest_bid_amount": 0,
+      "bids": []
+    },
+    {
+      "_id": "65ceb7230cf2dae9083b8d45",
+      "uuid": "1814c083d82c46e3a4ab09b2ec0bf7b7",
+      "auctioneer": "5417cf1bc66848f7a4435ccc1d400451",
+      "profile_id": "cc217e92d2444211b84fba5a8eeb2362",
+      "coop": [
+        "8771967de8e742beb246870876cc7151",
+        "1c22279ce0bd455995fac4d743755648",
+        "5417cf1bc66848f7a4435ccc1d400451"
+      ],
+      "start": 1708046115756,
+      "end": 1708132515756,
+      "item_name": "Personal Compactor 5000",
+      "item_lore": "§7Automatically turns certain materials\n§7in your inventory into their\n§7enchanted form.\n\n§eRight-click to configure!\n\n§8Does not grant Carpentry XP!\n\n§9§lRARE ACCESSORY",
+      "extra": "Personal Compactor 5000 Dropper",
+      "category": "accessories",
+      "tier": "RARE",
+      "starting_bid": 1399000,
+      "item_bytes": {
+        "type": 0,
+        "data": "H4sIAAAAAAAAAB2Rv07DQAzG3T9AmwUJISEhJA6JgaUoLYXAGKVFDKWt0g4wIXO5pieSu+riILqz8gqsHXmHPhjCwZPt7/PPp7MH0Iaa9gCgVoe6TuC7BjuRLQ3VPGgQpm1oKiOXUEUD2g86UfcZpgWXvx7sJbpYZbhm18g61YKKd7HdBGFJNkfSErNsLah0phBSOUJtBPeV05gVcMpObqxt6YQ278qQdWvOyApaKu3ggA3VejSkErGwLr/kFSfbjYp1uqSOzLR8E2yX1ix0Wjp1xjpjbwdWFcJYEqnjYRGhWzGe6U/TynK43dxtN1kcxkMRRtFwNpvEzy1ojjFXcMziVLnCGsxEZPMVSn6YuPZ9HzzYH36Qw5DI6deSVNH6/7ej6TCeTcbh6CWaPE7DaD6JX6oBZpYl6+c++hj0ev3Oaz8IOv2ky5m8kh3s+8FNkNxcL/xuE9qkc1UQ5iu+yNfP3HwC1GF3gDmmqrrBH/32Zq2yAQAA"
+      },
+      "claimed": false,
+      "claimed_bidders": [],
+      "bin": true,
+      "highest_bid_amount": 0,
+      "bids": []
+    },
+    {
+      "_id": "65ceb8160cf2dae9083b902e",
+      "uuid": "ae7e060ae2654602826c75a0a51104b4",
+      "auctioneer": "5417cf1bc66848f7a4435ccc1d400451",
+      "profile_id": "cc217e92d2444211b84fba5a8eeb2362",
+      "coop": [
+        "8771967de8e742beb246870876cc7151",
+        "1c22279ce0bd455995fac4d743755648",
+        "5417cf1bc66848f7a4435ccc1d400451"
+      ],
+      "start": 1708046358627,
+      "end": 1708132758627,
+      "item_name": "Personal Compactor 6000",
+      "item_lore": "§7Automatically turns certain materials\n§7in your inventory into their\n§7enchanted form.\n\n§eRight-click to configure!\n\n§8Does not grant Carpentry XP!\n\n§5§lEPIC ACCESSORY",
+      "extra": "Personal Compactor 6000 Dropper",
+      "category": "accessories",
+      "tier": "EPIC",
+      "starting_bid": 2589000,
+      "item_bytes": {
+        "type": 0,
+        "data": "H4sIAAAAAAAAAB2RwU7jQAyG3dKFNpeVEBISQmKQOHDJqhS6KccoFIEENGo57J6QmZh0tMlMNXEQPfAIvALXHnmHvgkvssJhTh7/vz9bdgDQg5YJAKDVhrbJ4L0FPxJXW24FsMGY96BDVs+heRvQuzIZXRaYV/L9H8BWZqpFgUtx3ThPXWh4x+tVFNfsSmSjsSiWimtvK6XJMxqrJE/eYFHBgTglsXS1V8Y+k2XnlxKxUzwn42FbDE17tEyZenK+/CUt9tcrmpp8zqEujP6nxK6dfTJ57elQdMGOLhxVyjpWuZdilaBfCF7of9LGsrNeDderYpxeJypOkvFsNpn+7ULnDkuCPRFT8pWzWKjElQvUMpj63e/3IYCf4xf2GDN781gzVd3vve2m4+lschffPCST2zRO7ifTh6ZAmHUt+hFFejA4OR+Fp1pH4RlGFD5G54MQKcMMTwbDYX/UgR6bkirGciEXeft4TT8B2rB5gSXm1NzgC/PQrWiyAQAA"
+      },
+      "claimed": false,
+      "claimed_bidders": [],
+      "bin": true,
+      "highest_bid_amount": 0,
+      "bids": []
+    },
+    {
+      "_id": "65ceb8410cf2dae9083b90a1",
+      "uuid": "0daa67f961d74685b1d22f2378313a48",
+      "auctioneer": "5417cf1bc66848f7a4435ccc1d400451",
+      "profile_id": "cc217e92d2444211b84fba5a8eeb2362",
+      "coop": [
+        "8771967de8e742beb246870876cc7151",
+        "1c22279ce0bd455995fac4d743755648",
+        "5417cf1bc66848f7a4435ccc1d400451"
+      ],
+      "start": 1708046401780,
+      "end": 1708132801780,
+      "item_name": "Personal Compactor 5000",
+      "item_lore": "§7Automatically turns certain materials\n§7in your inventory into their\n§7enchanted form.\n\n§eRight-click to configure!\n\n§8Does not grant Carpentry XP!\n\n§9§lRARE ACCESSORY",
+      "extra": "Personal Compactor 5000 Dropper",
+      "category": "accessories",
+      "tier": "RARE",
+      "starting_bid": 1399000,
+      "item_bytes": {
+        "type": 0,
+        "data": "H4sIAAAAAAAAAB2RwUrDQBCGp7Vqm4sggiCCK3jwEqmpphFPIVY81LakHvQkazJJF5PdspmIfQhfwWuPvkMfTJy4p9n5//lmmHEAetBSDgC02tBWKXy3YDsytaaWA1sk8x50UCcLaN4W9B5UiveFzCv+/jqwm6pqWcgVu8bGYhca3vlmPQxrMqUklciiWAmqra5Egpak0oLzaJUsKjhhJydWprZC6Q/UZOyKIzKCFqgs7LOhaS81YSoyY8sLbnG8WWOs8gW5SaGSd8H2xOhM5bXFU9YZG9wZrIQ2JHLLxSKSdsl4pj/PGsvBZn2zWRdxGI9EGEWj+Xwav3ShM5ElwhGLM7SV0bIQkSmXMuHBxHW/3wcH9kafZGVIZNVbTVh1//d2OBvF8+kkHL9G08dZGD1N49emgJl1zfqZf+kN/GF27fYHgedeDf3UDQZD3w2yzPPQy6784LIDPVIlViTLJV/k6+epvAVow86dLGWOzQ3+AGYJS1GyAQAA"
+      },
+      "claimed": false,
+      "claimed_bidders": [],
+      "bin": true,
+      "highest_bid_amount": 0,
+      "bids": []
+    }
+  ]
+}

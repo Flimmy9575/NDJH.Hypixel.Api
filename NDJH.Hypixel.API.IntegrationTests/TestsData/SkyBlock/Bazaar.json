@@ -1,0 +1,214 @@
+﻿{
+  "success": true,
+  "lastUpdated": 1708047151163,
+  "products": {
+    "INK_SACK:3": {
+      "product_id": "INK_SACK:3",
+      "sell_summary": [
+        {
+          "amount": 51850,
+          "pricePerUnit": 1.5,
+          "orders": 1
+        },
+        {
+          "amount": 29898,
+          "pricePerUnit": 1.4,
+          "orders": 1
+        },
+        {
+          "amount": 71680,
+          "pricePerUnit": 1.3,
+          "orders": 1
+        },
+        {
+          "amount": 59347,
+          "pricePerUnit": 1.2,
+          "orders": 2
+        },
+        {
+          "amount": 426000,
+          "pricePerUnit": 1.0,
+          "orders": 7
+        },
+        {
+          "amount": 534060,
+          "pricePerUnit": 0.9,
+          "orders": 14
+        },
+        {
+          "amount": 22823,
+          "pricePerUnit": 0.7,
+          "orders": 1
+        },
+        {
+          "amount": 27307,
+          "pricePerUnit": 0.5,
+          "orders": 1
+        }
+      ],
+      "buy_summary": [
+        {
+          "amount": 69904,
+          "pricePerUnit": 4.7,
+          "orders": 1
+        },
+        {
+          "amount": 3270,
+          "pricePerUnit": 4.8,
+          "orders": 1
+        },
+        {
+          "amount": 42484,
+          "pricePerUnit": 4.9,
+          "orders": 1
+        },
+        {
+          "amount": 38427,
+          "pricePerUnit": 5.0,
+          "orders": 3
+        },
+        {
+          "amount": 48592,
+          "pricePerUnit": 5.2,
+          "orders": 1
+        },
+        {
+          "amount": 48752,
+          "pricePerUnit": 5.3,
+          "orders": 1
+        },
+        {
+          "amount": 13227,
+          "pricePerUnit": 5.8,
+          "orders": 1
+        },
+        {
+          "amount": 51570,
+          "pricePerUnit": 5.9,
+          "orders": 1
+        },
+        {
+          "amount": 330788,
+          "pricePerUnit": 6.0,
+          "orders": 5
+        },
+        {
+          "amount": 940,
+          "pricePerUnit": 6.2,
+          "orders": 1
+        },
+        {
+          "amount": 71680,
+          "pricePerUnit": 6.3,
+          "orders": 1
+        },
+        {
+          "amount": 135680,
+          "pricePerUnit": 6.4,
+          "orders": 2
+        },
+        {
+          "amount": 67936,
+          "pricePerUnit": 6.5,
+          "orders": 1
+        },
+        {
+          "amount": 50000,
+          "pricePerUnit": 6.6,
+          "orders": 1
+        },
+        {
+          "amount": 25002,
+          "pricePerUnit": 6.7,
+          "orders": 1
+        },
+        {
+          "amount": 64768,
+          "pricePerUnit": 6.9,
+          "orders": 1
+        },
+        {
+          "amount": 70384,
+          "pricePerUnit": 7.0,
+          "orders": 2
+        },
+        {
+          "amount": 1601,
+          "pricePerUnit": 9.0,
+          "orders": 2
+        },
+        {
+          "amount": 53636,
+          "pricePerUnit": 9.4,
+          "orders": 1
+        },
+        {
+          "amount": 71000,
+          "pricePerUnit": 9.5,
+          "orders": 1
+        },
+        {
+          "amount": 59129,
+          "pricePerUnit": 50.0,
+          "orders": 4
+        },
+        {
+          "amount": 26944,
+          "pricePerUnit": 145.0,
+          "orders": 1
+        },
+        {
+          "amount": 1024,
+          "pricePerUnit": 189.3,
+          "orders": 1
+        },
+        {
+          "amount": 832,
+          "pricePerUnit": 899.5,
+          "orders": 2
+        },
+        {
+          "amount": 1408,
+          "pricePerUnit": 2994.9,
+          "orders": 2
+        },
+        {
+          "amount": 1060,
+          "pricePerUnit": 2995.9,
+          "orders": 3
+        },
+        {
+          "amount": 146,
+          "pricePerUnit": 3995.3,
+          "orders": 2
+        },
+        {
+          "amount": 64,
+          "pricePerUnit": 3996.6,
+          "orders": 4
+        },
+        {
+          "amount": 14,
+          "pricePerUnit": 3997.4,
+          "orders": 2
+        },
+        {
+          "amount": 437,
+          "pricePerUnit": 3998.5,
+          "orders": 1
+        }
+      ],
+      "quick_status": {
+        "productId": "INK_SACK:3",
+        "sellPrice": 1.4634266281743895,
+        "sellVolume": 2733411,
+        "sellMovingWeek": 133322002,
+        "sellOrders": 44,
+        "buyPrice": 4.776292171747739,
+        "buyVolume": 4260337,
+        "buyMovingWeek": 62385265,
+        "buyOrders": 659
+      }
+    }
+  }
+}

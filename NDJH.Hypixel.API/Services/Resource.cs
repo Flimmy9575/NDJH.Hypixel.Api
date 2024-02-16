@@ -10,7 +10,7 @@ public class Resource(IHttpDeserializerService httpRequestAndDeserializer) : IRe
 
     public async Task<AchievementResponse> GetAchievementsAsync(CancellationToken cancellationToken) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<AchievementResponse>(
-            "/resources/achievements", cancellationToken);
+            "resources/achievements", cancellationToken);
 
 
     public async Task<ChallengesResponse> GetChallengesAsync() =>
@@ -18,14 +18,14 @@ public class Resource(IHttpDeserializerService httpRequestAndDeserializer) : IRe
 
     public async Task<ChallengesResponse> GetChallengesAsync(CancellationToken cancellationToken) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<ChallengesResponse>(
-            "/resources/challenges", cancellationToken);
+            "resources/challenges", cancellationToken);
 
 
     public async Task<QuestsResponse> GetQuestsAsync() =>
         await GetQuestsAsync(CancellationToken.None);
 
     public async Task<QuestsResponse> GetQuestsAsync(CancellationToken cancellationToken) =>
-        await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<QuestsResponse>("/resources/quests",
+        await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<QuestsResponse>("resources/quests",
             cancellationToken);
 
 
@@ -34,7 +34,7 @@ public class Resource(IHttpDeserializerService httpRequestAndDeserializer) : IRe
 
     public async Task<GuildAchievementResponse> GetGuildAchievementsAsync(CancellationToken cancellationToken) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<GuildAchievementResponse>(
-            "/resources/guilds/achievements", cancellationToken);
+            "resources/guilds/achievements", cancellationToken);
 
 
     public async Task<VanityPetsAndCompanionsResponse> GetVanityPetsInformationAsync() =>
@@ -43,7 +43,7 @@ public class Resource(IHttpDeserializerService httpRequestAndDeserializer) : IRe
     public async Task<VanityPetsAndCompanionsResponse> GetVanityPetsInformationAsync(
         CancellationToken cancellationToken) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<VanityPetsAndCompanionsResponse>(
-            "/resources/vanity/pets", cancellationToken);
+            "resources/vanity/pets", cancellationToken);
 
 
     public async Task<VanityPetsAndCompanionsResponse> GetCompanionInformationAsync() =>
@@ -52,5 +52,5 @@ public class Resource(IHttpDeserializerService httpRequestAndDeserializer) : IRe
     public async Task<VanityPetsAndCompanionsResponse> GetCompanionInformationAsync(
         CancellationToken cancellationToken) =>
         await httpRequestAndDeserializer.RequestAndSerializeResponseAsync<VanityPetsAndCompanionsResponse>(
-            "/resources/vanity/companions", cancellationToken);
+            "resources/vanity/companions", cancellationToken);
 }
