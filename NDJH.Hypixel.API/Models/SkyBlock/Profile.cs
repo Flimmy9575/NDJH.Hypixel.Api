@@ -4,16 +4,16 @@ using NDJH.Hypixel.API.Models.Resources;
 namespace NDJH.Hypixel.API.Models.SkyBlock;
 
 public record DeletionNotice(
-    [property: JsonPropertyName("timestamp")]
-    long Timestamp);
+    [property: JsonPropertyName("timestamp"), JsonConverter(typeof(UnixTimestampJsonConverter))]
+    DateTime Timestamp);
 
 public record ProfileMember(
     [property: JsonPropertyName("deletion_notice")]
     DeletionNotice DeletionNotice);
 
 public record Transaction(
-    [property: JsonPropertyName("timestamp")]
-    long Timestamp,
+    [property: JsonPropertyName("timestamp"), JsonConverter(typeof(UnixTimestampJsonConverter))]
+    DateTime Timestamp,
     [property: JsonPropertyName("action")] string Action,
     [property: JsonPropertyName("initiator_name")]
     string InitiatorName,

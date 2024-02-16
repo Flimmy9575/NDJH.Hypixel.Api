@@ -5,7 +5,8 @@ namespace NDJH.Hypixel.API.Models.PlayerData;
 public record Member(
     [property: JsonPropertyName("uuid")] string Uuid,
     [property: JsonPropertyName("rank")] string Rank,
-    [property: JsonPropertyName("joined")] long Joined,
+    [property: JsonPropertyName("joined"), JsonConverter(typeof(UnixTimestampJsonConverter))]
+    DateTime Joined,
     [property: JsonPropertyName("questParticipation")]
     int QuestParticipation,
     [property: JsonPropertyName("expHistory")]
@@ -16,8 +17,8 @@ public record Rank(
     [property: JsonPropertyName("default")]
     bool Default,
     [property: JsonPropertyName("tag")] string Tag,
-    [property: JsonPropertyName("created")]
-    long Created,
+    [property: JsonPropertyName("created"), JsonConverter(typeof(UnixTimestampJsonConverter))]
+    DateTime Created,
     [property: JsonPropertyName("priority")]
     int Priority);
 
@@ -29,8 +30,8 @@ public record Guild(
     [property: JsonPropertyName("coins")] int Coins,
     [property: JsonPropertyName("coinsEver")]
     int CoinsEver,
-    [property: JsonPropertyName("created")]
-    long Created,
+    [property: JsonPropertyName("created"), JsonConverter(typeof(UnixTimestampJsonConverter))]
+    DateTime Created,
     [property: JsonPropertyName("members")]
     IReadOnlyList<Member> Members,
     [property: JsonPropertyName("ranks")] IReadOnlyList<Rank> Ranks,

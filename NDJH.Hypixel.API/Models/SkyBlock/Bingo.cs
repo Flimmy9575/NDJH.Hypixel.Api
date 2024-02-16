@@ -9,9 +9,9 @@ public record Goal(
     [property: JsonPropertyName("lore")] string Lore,
     [property: JsonPropertyName("tiers")] IReadOnlyList<int> Tiers,
     [property: JsonPropertyName("progress")]
-    int Progress,
+    long Progress,
     [property: JsonPropertyName("requiredAmount")]
-    int RequiredAmount);
+    long RequiredAmount);
 
 public record BingoResponse(
     [property: JsonPropertyName("id")] int Id,
