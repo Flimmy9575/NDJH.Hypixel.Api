@@ -28,18 +28,18 @@ public class HttpDeserializerService(
         CancellationToken cancellationToken)
     {
         await rateLimitService.WaitForRateLimitAsync(cancellationToken);
-        var response = await GetResponseAndLogStepsAsync(url, cancellationToken);
-        var content = await response.Content.ReadAsStringAsync(cancellationToken);
+        var (content, statusCode) = await GetResponseAndLogStepsAsync(url, cancellationToken);
 
         var errorData = ReadAndDeserializeDataAsync<ApiErrorModel>(content);
-        HandleErrorStatusCode(response.StatusCode, errorData);
+        HandleErrorStatusCode(statusCode, errorData);
 
         logger.LogTrace("Received {Path} response. Deserializing", url);
         var data = ReadAndDeserializeDataAsync<TResponse>(content);
         return data;
     }
 
-    private async Task<HttpResponseMessage> GetResponseAndLogStepsAsync(string url, CancellationToken cancellationToken)
+    private async Task<(string, HttpStatusCode)> GetResponseAndLogStepsAsync(string url,
+        CancellationToken cancellationToken)
     {
         logger.LogTrace("Requesting to {Path}.", url);
         var response = await httpClient.GetAsync(url, cancellationToken);
@@ -51,7 +51,7 @@ public class HttpDeserializerService(
         SetRemainingLimits(response.Headers);
 
 
-        return response;
+        return (content, response.StatusCode);
     }
 
     private void SetRemainingLimits(HttpResponseHeaders headers)
