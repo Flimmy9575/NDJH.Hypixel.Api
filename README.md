@@ -48,10 +48,20 @@ Below are the current supported endpoints.
 | Punishment Stats          | None                                   |    ❌    |
 
 ## Installation
+This package uses dotnet 8.
 
 ### From Nuget
+Simply run the following commands
+```shell
+dotnet package add NDJH.Hypixel.API
+```
+If you want DI support run:
+```shell
+dotnet package add NDJH.Hypixel.API.DependencyInjection
+```
 
 ### From Source
+
 
 ## Configuration
 
@@ -82,6 +92,28 @@ Ensure that this configuration file is located in the root of your project unles
 different location.
 
 ## Examples
+
+### DI
+Make sure you either inject `IHypixelWrapper` or the "service" you want such as `ISkyBlock`.
+```csharp
+public class YourClass(ISkyBlock _skyBlock, IHypixelWrapper _hypixel) 
+{
+    public Task YourMethod()
+    {
+        // Getting SkyBlock collections via SkyBlock Service
+        var skyBlockCollections = await _skyblock.GetCollectionsAsync();
+        
+        // You can now access all of the current collections data via the variable
+        
+        // Getting SkyBlock Collections From the HypixelWrapper
+        var skyBlockCollections2 = await _hypixel.SkyBlock.GetCollectionsAsync();
+        
+        
+    }
+    
+}
+```
+
 
 # License
 
