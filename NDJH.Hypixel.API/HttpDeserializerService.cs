@@ -28,20 +28,24 @@ public class HttpDeserializerService(
         CancellationToken cancellationToken)
     {
         await rateLimitService.WaitForRateLimitAsync(cancellationToken);
-        var response = await GetResponseAndLogStepsAsync(url, cancellationToken);
-        var content = await response.Content.ReadAsStringAsync(cancellationToken);
+        var (content, statusCode) = await GetResponseAndLogStepsAsync(url, cancellationToken);
 
+        // Serialize to ApiError and handle any errors
         var errorData = ReadAndDeserializeDataAsync<ApiErrorModel>(content);
-        HandleErrorStatusCode(response.StatusCode, errorData);
+        HandleErrorStatusCode(statusCode, errorData);
 
         logger.LogTrace("Received {Path} response. Deserializing", url);
+
+        // Serialize to requested object and return
         var data = ReadAndDeserializeDataAsync<TResponse>(content);
         return data;
     }
 
-    private async Task<HttpResponseMessage> GetResponseAndLogStepsAsync(string url, CancellationToken cancellationToken)
+    private async Task<(string, HttpStatusCode)> GetResponseAndLogStepsAsync(string url,
+        CancellationToken cancellationToken)
     {
         logger.LogTrace("Requesting to {Path}.", url);
+        // Making and reading response
         var response = await httpClient.GetAsync(url, cancellationToken);
         var content = await response.Content.ReadAsStringAsync(cancellationToken);
         logger.LogTrace("Hypixel returned an {StatusCode} with the response of: {Response}", response.StatusCode,
@@ -51,10 +55,10 @@ public class HttpDeserializerService(
         SetRemainingLimits(response.Headers);
 
 
-        return response;
+        return (content, response.StatusCode);
     }
 
-    private void SetRemainingLimits(HttpResponseHeaders headers)
+    private void SetRemainingLimits(HttpHeaders headers)
     {
         var remainingRequests = 0;
         var resetTime = new DateTime();
