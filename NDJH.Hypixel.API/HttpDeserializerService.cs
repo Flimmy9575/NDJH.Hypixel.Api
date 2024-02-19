@@ -95,7 +95,12 @@ public class HttpDeserializerService(
 
     private void HandleErrorStatusCode(HttpStatusCode statusCode, ApiErrorModel errorData)
     {
-        string logMessage;
+        if (string.IsNullOrWhiteSpace(errorData.Cause))
+        {
+            return;
+        }
+
+        var logMessage = "An unknown API error occurred";
         switch (statusCode)
         {
             case HttpStatusCode.BadRequest:
@@ -116,9 +121,6 @@ public class HttpDeserializerService(
 
                 logMessage = "Rate limit hit. The throttle {Global} global";
                 logger.LogWarning(logMessage, global);
-                break;
-            default:
-                logMessage = "An unidentified error has occured: {Cause}";
                 break;
         }
 
